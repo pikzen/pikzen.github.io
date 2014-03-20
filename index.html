@@ -1,0 +1,44 @@
+<p>Yo les négros, voila ce qu'il vous faut pour le projet</p>
+<h2 id="installer-tomcat-">Installer Tomcat </h2>
+<p>C'est le serveur, alors ca peut être utile<br>Windows : <a href="http://apache.lehtivihrea.org/tomcat/tomcat-7/v7.0.52/bin/apache-tomcat-7.0.52-windows-x86.zip">http://apache.lehtivihrea.org/tomcat/tomcat-7/v7.0.52/bin/apache-tomcat-7.0.52-windows-x86.zip</a><br>Linux : sudo apt-get install tomcat</p>
+<p>Tu extrait ca ou tu veux, j'men fous. La seule chose à connaitre, c'est ou se trouve le dossier webapps
+Sous Linux, par défaut, c'est dans /usr/share/tomcat7/webapps.</p>
+<h2 id="installer-maven">Installer Maven</h2>
+<p>Ca permet de compiler, alors c'est cool.<br>Windows : <a href="http://apache.lehtivihrea.org/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.zip">http://apache.lehtivihrea.org/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.zip</a><br>Linux : sudo apt-get install maven</p>
+<p>Tu extrais ca ou tu veux. La seule condition, c'est d'ajouter le dossier bin/ dans le PATH (pour windows).</p>
+<h2 id="installer-mysql">Installer MySQL</h2>
+<p>Windows : <a href="http://dev.mysql.com/downloads/file.php?id=450945">http://dev.mysql.com/downloads/file.php?id=450945</a><br>Linux : sudo apt-get install mysql  </p>
+<p>Bon, c'est la que ca devient drôle. L'installeur va demander le mot de passe du compte root.
+Tu mets 'rootpassword', parce que sinon faut changer les scripts, et c'est chiant.</p>
+<p>Une fois que c'est fait : 
+Windows : tu vérifie qu'il y a bien MySQL Notifier dans la barre des taches, et qu'il est bien lancé
+Linux : sudo service mysqld start</p>
+<h2 id="git-puller">Git puller</h2>
+<p>Si tu n'as JAMAIS configuré git, que tu n'as pas pull le dépot, etc.<br>Windows : <a href="http://git-scm.com/download/win">http://git-scm.com/download/win</a> (C'est vraiment, vraiment pratique. Une fois que Git Bash est lancé, c'est quasiment un environnement linux)<br>Linux : sudo apt-get install git</p>
+<p>Dans le terminal, faut penser a préparer les clés SSH en tapant </p>
+<ul>
+<li>eval `ssh-agent`</li>
+<li><code>ssh-add ~/.ssh/exxxxxxxxxx</code></li>
+</ul>
+<p>Si tu n'as pas encore pull le dépot (vilain)
+<code>git clone git@gitinfo:appli_med_b.git</code></p>
+<p>Sinon, tu te mets dans le dossier ou ca a déjà été cloné, puis git pull quoi.</p>
+<h2 id="pr-parer-mysql">Préparer MySQL</h2>
+<p>Une fois que c'est pull, tu te mets dans le dossier avkapp/mysql (avec ton terminal)<br><code>mysql -u root --password=rootpassword</code><br>Une fois que t'es log dans mysql :<br><code>source create_db.sql;</code><br>Une fois que c'est fait, tu quitte MySQL (exit, ou bien un bon vieux CtrlC)<br>On se relog, sur la base de données<br><code>mysql -u root --password=rootpassword avkapp</code></p>
+<p>Préparation des données :<br><code>source create_tables.sql;</code><br><code>source insert_med.sql;</code><br><code>INSERT INTO Office(Name, Address, PhoneNumber) VALUES ("Test", "Test", "000000");</code><br><code>INSERT INTO Profile(Name) VALUES ("Medecin"), ("Test");</code></p>
+<p>OK, on a maintenant une base de données utilisable</p>
+<h2 id="lancer-tomcat">Lancer Tomcat</h2>
+<p>Windows : Dossier d'installation tomcat, bin/, tu ouvres ton petit terminal et tu tapes <code>catalina.bat start</code><br>Linux : sude service tomcat7 start</p>
+<h2 id="coder">Coder</h2>
+<p>Tu vas dans le dossier <code>server</code> que tu as pull. Si a l'interieur y'a un fichier <code>pom.xml</code>, c'est que t'es au bon endroit
+C'est dans ce dossier que se font TOUTES les modifications. Java, HTML, JS, CSS, tout.</p>
+<p>Pour lancer la compilation, tu te mets dans le dosser serveur, et tu fais <code>mvn clean package</code>. Si t'as un beau message "BUILD SUCCESS", c'est que c'est bon.
+Sinon, bah tu sais pas coder, et tu regarde les erreurs.
+Une fois que c'est fait, ca génère un fichier avkapp.war dans target/
+Tu prends ce fichier .war, tu le mets dans le dossier webapps. Tomcat est CENSE le déployer tout seul. Si tu vois que ca reste sur "Initializing Jersey Application...":</p>
+<ul>
+<li>Tu fermes Tomcat</li>
+<li>tu supprime le dossier webapps/avkapp</li>
+<li>Tu relances Tomcat</li>
+</ul>
+<p>Après, l'application est disponible à l'adresse <code>localhost:8080/avkapp/</code></p>
