@@ -1,0 +1,1290 @@
+[
+	{
+		"name":"Gub",
+		"flair":"Abt Natural",
+		"id":0,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Gunerang",
+		"flair":"Give it a burl.",
+		"id":1,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Hornet",
+		"flair":"Fear the swarm!",
+		"id":2,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Infinity",
+		"flair":"It's closer than you think! (no it isn't)",
+		"id":3,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Logan's Gun",
+		"flair":"Gun, Gunner!",
+		"id":4,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Maggie",
+		"flair":"Monty's wife don't take no guff.",
+		"id":5,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Thunderball Fists",
+		"flair":"I can have such a thing?",
+		"id":6,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Unkempt Harold",
+		"flair":"Did I fire six shots, or only five ? Three? Seven. Whatever.",
+		"id":7,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Conference Call",
+		"flair":"Let's just ping everyone all at once.",
+		"id":8,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Deliverance",
+		"flair":"Kiki got a shotgun",
+		"id":9,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Flakker",
+		"flair":"Flak the World",
+		"id":10,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Sledge's Shotgun",
+		"flair":"The Legend Lives",
+		"id":11,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Striker",
+		"flair":"Fandir? Thirteen.",
+		"id":12,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Hammer Buster",
+		"flair":"Gar! Gorarr! My dad's a scientist! GWARRRR!!!!",
+		"id":13,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"KerBlaster",
+		"flair":"Torgue got more BOOM!",
+		"id":14,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Madhous!",
+		"flair":"It's a Madhouse! A MADHOUSE!!!",
+		"id":15,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Ogre",
+		"flair":"Ogre chew their food",
+		"id":16,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Shredifier",
+		"flair":"Speed kills.",
+		"id":17,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Veruc",
+		"flair":"I want that rifle, Daddy",
+		"id":18,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Invade",
+		"flair":"The Executioner has arrived.",
+		"id":19,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Longbow",
+		"flair":"Ceci n'est pas une sniper rifle!",
+		"id":20,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Lyuda",
+		"flair":"Man Killer",
+		"id":21,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Pitchfork",
+		"flair":"Mainstream'd!",
+		"id":22,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Skullmasher",
+		"flair":"Makes your brain hurt.",
+		"id":23,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Volcano",
+		"flair":"Pele humbly requests a sacrifice, if it's not too much trouble.",
+		"id":24,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Badaboom",
+		"flair":"Multi-kill.",
+		"id":25,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"bunny",
+		"flair":"Hippity Hoppity!",
+		"id":26,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Mongol",
+		"flair":"The Horde will always return!",
+		"id":27,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Norfleet",
+		"flair":"Blows Up Everything!!!",
+		"id":28,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Nukem",
+		"flair":"Name dropper.",
+		"id":29,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Pyrophobia",
+		"flair":"It's actually a fairly rational fear in this case.",
+		"id":30,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Baby Maker",
+		"flair":"Who's a widdle gunny wunny!!!",
+		"id":31,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Bitch",
+		"flair":"yup. back.",
+		"id":32,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Emperor",
+		"flair":"you know... for him.",
+		"id":33,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"HellFire",
+		"flair":"We don't need no fire...",
+		"id":34,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Slagga",
+		"flair":"blagaga",
+		"id":35,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"The Bee",
+		"flair":"Float like a butterfly...",
+		"id":36,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Black Hole",
+		"flair":"You are the center of the universe.",
+		"id":37,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"The Cradle",
+		"flair":"...to the grave",
+		"id":38,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Fabled Tortoise",
+		"flair":"Win by a hare",
+		"id":39,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Flame of the Firehawk",
+		"flair":"From the ashes she will rise.",
+		"id":40,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Hide of Terramorphous",
+		"flair":"...His hide turned the mightiest tame...",
+		"id":41,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Impaler",
+		"flair":"Vlad would be proud.",
+		"id":42,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Neogenator",
+		"flair":"For an impenetrable shield stand inside yourself.",
+		"id":43,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"The Sham",
+		"flair":"Wow, I CAN do this all day.",
+		"id":44,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"The Transformer",
+		"flair":"There's more than your eye can see.",
+		"id":45,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Whisky Tango Foxtrot",
+		"flair":"Situation normal... ...all foxtroted up.",
+		"id":46,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Bonus Package",
+		"flair":"2x more awesome, bonus extreme!",
+		"id":47,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Bouncing Bonny",
+		"flair":"Your sister is such a bitch.",
+		"id":48,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Chain Lightning",
+		"flair":"Don't pay it back, pay it forward.",
+		"id":49,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Fastball",
+		"flair":"Forget the curveball Ricky, give him the heater.",
+		"id":50,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Fire Bee",
+		"flair":"Bees are coming!",
+		"id":51,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Fire Storm",
+		"flair":"What manner of man are you that can summon up fire without flint or tinder?",
+		"id":52,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Leech",
+		"flair":"A skillful leech is better far, than half a hundred men of war.",
+		"id":53,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Nasty Surprise",
+		"flair":"Supplies!",
+		"id":54,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Pandemic",
+		"flair":"Spread the sickness.",
+		"id":55,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Quasar",
+		"flair":"E = mc^(OMG)/wtf",
+		"id":56,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Rolling Thunder",
+		"flair":"The thunder shall bring forth the pain!",
+		"id":57,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Storm Front",
+		"flair":"Sometimes lightning does strike twice",
+		"id":58,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Berserker",
+		"flair":"\"Never look at my fist\"",
+		"id":59,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Hunter",
+		"flair":"\"I will never die.\"",
+		"id":60,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Siren",
+		"flair":"\"(Giggles) I'm really good at this.\"",
+		"id":61,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Soldier",
+		"flair":"\"It's like Christmas.\"",
+		"id":62,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Psycho",
+		"flair":"\"-One day I'll escape this hell and you'll be gone. - NIPPLE SALADS!\"",
+		"id":63,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Legendary Mechromancer",
+		"flair":"",
+		"id":64,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Blood of Terramorphous",
+		"flair":"...His blood could inspire",
+		"id":65,
+		"game":"bl2",
+		"rarity": "legendary"
+	},
+	{
+		"name":"Fibber",
+		"flair":"Would I lie to you?",
+		"id":66,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Flynt's Tinderbox",
+		"flair":"Good for starting fires.",
+		"id":67,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Greed",
+		"flair":"Thief.",
+		"id":68,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Grog Nozzle",
+		"flair":"Hand over the keys, Sugar...",
+		"id":69,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Gwen's Head",
+		"flair":"Thinking outside the box.",
+		"id":70,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Judge",
+		"flair":"I am free now.",
+		"id":71,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Lady Fist",
+		"flair":"Love is a Lady Finger. True Love is a Lady Fist.",
+		"id":72,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Law",
+		"flair":"De Da.",
+		"id":73,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Little Evie",
+		"flair":"Shock and awwwww! So cute!",
+		"id":74,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Pocket Rocket",
+		"flair":"Did you ever have the feeling...",
+		"id":75,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Rex",
+		"flair":"Basically, it's a big gun.",
+		"id":76,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Rubi",
+		"flair":"Whenever I'm caught between two evils, I take the one I've never tried.",
+		"id":77,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Teapot",
+		"flair":"Havin' a tea Partay drinkin' mah Teeea!",
+		"id":78,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Veritas",
+		"flair":"Shoulda stopped at one.",
+		"id":79,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Blockhead",
+		"flair":"Also try Minecraft!",
+		"id":80,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Dog",
+		"flair":"Because one barrel ain' enough, and two is too few.",
+		"id":81,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Heart Breaker",
+		"flair":"I don't want to set the world on fire...",
+		"id":82,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Hydra",
+		"flair":"5 heads of Death!",
+		"id":83,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Jolly Roger",
+		"flair":"A Pirate's Life for me!",
+		"id":84,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Landscaper",
+		"flair":"Get off my lawn!",
+		"id":85,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Octo",
+		"flair":"Octo means 9.",
+		"id":86,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Orphan Maker",
+		"flair":"Makes Orphans Often. Curse of the Nefarious Backlash!",
+		"id":87,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"RokSalt",
+		"flair":"Don't retreat. Instead, reload!",
+		"id":88,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Shotgun 1340",
+		"flair":"I like being a gun.",
+		"id":89,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Teeth of Terramorphous",
+		"flair":"His teeth made them flee in shame...",
+		"id":90,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Tidal Wave",
+		"flair":"Flee the Wave, Dude!",
+		"id":91,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Triquetra",
+		"flair":"Good things kill in threes.",
+		"id":92,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Twister",
+		"flair":"Putting trouble on the run.",
+		"id":93,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Boom Puppy",
+		"flair":"Boom! Boom! Boom! BOOM! BOOOM!!!! GOOD DOGGY!!!",
+		"id":94,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"CHOPPER",
+		"flair":"Get to it.",
+		"id":95,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Damned Cowboy",
+		"flair":"Speak Softly. Carry This.",
+		"id":96,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Evil Smasher",
+		"flair":"Evil will be SMASHED!!! WITH SMASHING!!! EVIL!!! SMASH!!! ER!!!",
+		"id":97,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Hail",
+		"flair":"What play thing can you offer me today?",
+		"id":98,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Kitten",
+		"flair":"We're all mad here. I'm mad. You're mad.",
+		"id":99,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Rapier",
+		"flair":"As I end the refrain, thrust home. Curse of the Porcelain Fist!",
+		"id":100,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Scorpio",
+		"flair":"Say not in grief: \"He is no more,\" but live in thankfulness that he was.",
+		"id":101,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Stinkpot",
+		"flair":"We're Pirates. We don't follow the rules.",
+		"id":102,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Stomper",
+		"flair":"Oh, sorry, was that your head?",
+		"id":103,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Buffalo",
+		"flair":"Bison Bison had had had had had Bison Bison Bison shi shi shi.",
+		"id":104,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Chère-amie",
+		"flair":"Je suis enchanté. Ou est le bibliotheque?",
+		"id":105,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Cobra",
+		"flair":"Found out about this, I was like DAAAMN, I'm bringing that gun BACK!",
+		"id":106,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Elephant Gun",
+		"flair":"Hated by large numbers of people.",
+		"id":107,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Fremington's Edge",
+		"flair":"I can see my house from here.",
+		"id":108,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Morningstar",
+		"flair":"a Rose by any other name...",
+		"id":109,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Pimpernel",
+		"flair":"Sink me!",
+		"id":110,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Sloth",
+		"flair":"Yeah, booze'll do that to ya...",
+		"id":111,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Trespasser",
+		"flair":"I infrequently perish.",
+		"id":112,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"12 Pounder",
+		"flair":"Nec Pluribus Impar, Bitches",
+		"id":113,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Creamer",
+		"flair":"non-dairy",
+		"id":114,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Hive",
+		"flair":"full of bees.",
+		"id":115,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Roaster",
+		"flair":"Toasty!",
+		"id":116,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Bane",
+		"flair":"in Spain, stays mainly on the plain",
+		"id":117,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Chulainn",
+		"flair":"Riastrad!",
+		"id":118,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Commerce",
+		"flair":"I have a Soldier, a Siren, two Scooters and a Claptrap.",
+		"id":119,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Lascaux",
+		"flair":"The gun of the Bulls.",
+		"id":120,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Sand Hawk",
+		"flair":"In. Not unlike Errol.",
+		"id":121,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"1340 Shield",
+		"flair":"If you can't beat em, join em",
+		"id":122,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Aequitas",
+		"flair":"The second is better.",
+		"id":123,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Captain Blade's Manly Man Shield",
+		"flair":"What a fabulous window of treatment. Curse of the Elementals!",
+		"id":124,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Order",
+		"flair":"Chung-gunk!",
+		"id":125,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Pot O' Gold",
+		"flair":"Blarney I say! 'Tis blarney!",
+		"id":126,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"The Rough Rider",
+		"flair":"It takes more than that to kill a Bull Mouse.",
+		"id":127,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Contraband Sky Rocket",
+		"flair":"WARNING: Not intended for indoor use.",
+		"id":128,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Fireball",
+		"flair":"Porkchop Sandwiches!",
+		"id":129,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Fuster Cluck",
+		"flair":"Make it rain!",
+		"id":130,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Kiss of Death",
+		"flair":"It takes two to get one in trouble.",
+		"id":131,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Lightning Bolt",
+		"flair":"What's a jiggawatt?",
+		"id":132,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Magic Missile",
+		"flair":"No wand required. Just point and shoot.",
+		"id":133,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Captain Blade's Midnight Star",
+		"flair":"Hangin' around with you is no picnic. Curse of the Cackling Designer!",
+		"id":134,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Captain Blade's Otto Idol",
+		"flair":"Every man for himself. Curser of the Sudden-er Death!",
+		"id":135,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Deputy's Badge",
+		"flair":"Who the hell shot me?",
+		"id":136,
+		"game":"bl2",
+		"rarity": "unique"
+	},
+	{
+		"name":"Dahlminator",
+		"flair":"Dodge this.",
+		"id":137,
+		"game":"bl2",
+		"rarity": "eridian"
+	},
+	{
+		"name":"Slow Hand",
+		"flair":"Take your time, Sugar...",
+		"id":138,
+		"game":"bl2",
+		"rarity": "eridian"
+	},
+	{
+		"name":"SWORDSPLOSION!!!",
+		"flair":"Because Mister Torgue Said So.",
+		"id":139,
+		"game":"bl2",
+		"rarity": "eridian"
+	},
+	{
+		"name":"Yellow Jacket",
+		"flair":"By the people. For the people.",
+		"id":140,
+		"game":"bl2",
+		"rarity": "eridian"
+	},
+	{
+		"name":"Breath of Terramorphous",
+		"flair":"...His breath was of fire...",
+		"id":141,
+		"game":"bl2",
+		"rarity": "eridian"
+	},
+	{
+		"name":"Devastator",
+		"flair":"Hail.",
+		"id":142,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Infection",
+		"flair":"Itchy. Tasty.",
+		"id":143,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Stinger",
+		"flair":"It's like butter, baby.",
+		"id":144,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Interfacer",
+		"flair":"Because it enters your face. Get it? IT ENTERS YOUR FACE!",
+		"id":145,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Omen",
+		"flair":"I'm gonna need you to stand back.",
+		"id":146,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Retcher",
+		"flair":"Ewww",
+		"id":147,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Lead Storm",
+		"flair":"What a glorious feeling!",
+		"id":148,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Seeker",
+		"flair":"Oh yeah, that's fair...",
+		"id":149,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Seraphim",
+		"flair":"Holy? Holy? Holey!",
+		"id":150,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Hawk Eye",
+		"flair":"Eye certain. Finger Lightning. Aim Death.",
+		"id":151,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Patriot",
+		"flair":"Our voice will not be silenced!",
+		"id":152,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Ahab",
+		"flair":"for hate's sake.",
+		"id":153,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Actualizer",
+		"flair":"We need to talk about your DPS report.",
+		"id":154,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Florentine",
+		"flair":"Double trouble",
+		"id":155,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Tattier",
+		"flair":"If thou'st would'st snitch'st, acquire thine stitch!",
+		"id":156,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Antagonist",
+		"flair":"I'm rubber, you're glue.",
+		"id":157,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Big Boom Blaster",
+		"flair":"For all your big boom blasting needs!",
+		"id":158,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Blockade",
+		"flair":"Am I living or am I dying?",
+		"id":159,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Evolution",
+		"flair":"Strength through adversity.",
+		"id":160,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Hoplite",
+		"flair":"Alone a mere soldier, together an unstoppable phalanx.",
+		"id":161,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Pun-chee",
+		"flair":"You wanna go, asshole?",
+		"id":162,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Sponge",
+		"flair":"Highly absorbent!",
+		"id":163,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Crossfire",
+		"flair":"Find, fix, flank, finish!",
+		"id":164,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Meteor Shower",
+		"flair":"Not just for wishing on!",
+		"id":165,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"O-Negative",
+		"flair":"Universal donor!",
+		"id":166,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Blood of the Seraphs",
+		"flair":"Their power courses through you...",
+		"id":167,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Breath of the Seraphs",
+		"flair":"Their return is to be feared...",
+		"id":168,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Might of the Seraphs",
+		"flair":"Become the unstoppable force!",
+		"id":169,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Shadow of the Seraphs",
+		"flair":"A shadow is a copy of self, only shadier.",
+		"id":170,
+		"game":"bl2",
+		"rarity": "seraph"
+	},
+	{
+		"name":"Stalker",
+		"flair":"You can run, but you can't hide.",
+		"id":171,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Unforgiven",
+		"flair":"It's a helluva thing...",
+		"id":172,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Wanderlust",
+		"flair":"You never know until you go.",
+		"id":173,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Butcher",
+		"flair":"Fresh Meat!",
+		"id":174,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Carnage",
+		"flair":"huh. It shoots rockets.",
+		"id":175,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Bearcat",
+		"flair":"I love the smell of popcorn in the morning.",
+		"id":176,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Bekah",
+		"flair":"Shoot them in the face. Twice.",
+		"id":177,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Sawbar",
+		"flair":"Surpresssing Fires!!!",
+		"id":178,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Godfinger",
+		"flair":"Such a Cod Finger",
+		"id":179,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Storm",
+		"flair":"Tut, Tut, it looks like rain.",
+		"id":180,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Tunguska",
+		"flair":"It will split the sky in two.",
+		"id":181,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"Avenger",
+		"flair":"Counterbution revengence. The reckoning.",
+		"id":182,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	},
+	{
+		"name":"",
+		"flair":"",
+		"id":183,
+		"game":"bl2",
+		"rarity": "pearlescent"
+	}
+]
