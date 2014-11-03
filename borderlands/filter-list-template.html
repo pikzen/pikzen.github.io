@@ -34,19 +34,21 @@
 	</div>
 	<div class="category">
 		<md-subheader>Sort by...</md-subheader>
-			<md-list>
+		<md-list>
+			<md-item>
 				<md-radio-group>
-					<md-item>
-						<md-radio-button value="Rarity" aria-label="Rarity">Rarity</md-radio-button>
-					</md-item>
-					<md-item>
-						<md-radio-button value="Game" aria-label="Game">Game</md-radio-button>
-					</md-item>
-					<md-item>
-						<md-radio-button value="Name" aria-label="Name">Name</md-radio-button>
-					</md-item>
-			</md-radio-group>
+					<md-radio-button value="Rarity" aria-label="Rarity">Rarity</md-radio-button>
+					<md-radio-button value="Game" aria-label="Game">Game</md-radio-button>
+					<md-radio-button value="Name" aria-label="Name">Name</md-radio-button>
+				</md-radio-group>
+			</md-item>
 		</md-list>
-	</div>
+		<md-subheader>Others</md-subheader>
+		<md-list>
+			<md-item>
+				<md-checkbox ng-model="hideOwned" aria-label="Hide owned">Hide owned items</md-checkbox>
+			</md-item>
+		</md-list>
+	</div>"
 </md-bottom-sheet>
 

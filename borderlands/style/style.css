@@ -6,6 +6,10 @@ header {
 	transition: height linear 0.5s;
 }
 
+body {
+	background-color: #eee;
+}
+
 header.fully-open {
 	height: 250px;
 }
@@ -19,6 +23,10 @@ header h1 {
 	color: white;
 	text-shadow: 3px 3px #222;
 	margin-top: 0;
+}
+
+md-card {
+	background-color: white;
 }
 
 header.fully-open h1 {
