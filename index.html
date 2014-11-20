@@ -3,161 +3,114 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <title>RequestPolicy (Continued)</title>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="row">
+    <div class="row header">
       <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+        <h1 class="requestpolicy">RequestPolicy</h1>
+        <h2 class="continued">(Continued)</h2>
+        <p>RequestPolicy is an extension for Mozilla browsers that increases your browsing privacy, security, and speed by giving you control over cross-site requests on pages you visit.</p>
+        <div class="button download-button">
+          <h3>Download RequestPolicy</h3>
+          <h4>Addon for Mozilla Firefox</h4>
+        </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-        </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
+    <div data-magellan-expedition="fixed" class="row navigation">
+      <dl class="row sub-nav">
+        <dd><a class="faq-link header-link" href="#faq">FAQ</a></dd>
+        <dd><a class="privacy-link header-link" href="#privacy">Privacy</a></dd>
+        <dd><a class="security-link header-link" href="#security">Security</a></dd>
+        <dd><a class="github-link header-link" href="https://github.com/RequestPolicyContinued/requestpolicy/" class="out-link">GitHub</a></dd>
+        <dd><a class="issues-link header-link" href="https://github.com/RequestPolicyContinued/requestpolicy/issues" class="out-link">Issues</a></dd>
+        <dd><a class="beta-link header-link" href="#beta">Beta</a></dd>
+        <dd><a class="about-link header-link" href="#about">About</a></dd>
+      </dl>
     </div>
 
     <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+      <h1 id="faq">Frequently Asked Questions</h1>
+      <h3>What are cross-site requests?</h3>
+      <p>Cross-site requests are requests that your browser is told to make by a website you are visiting to a completely different website. Though usually legitimate requests, they often result in advertising companies and other websites knowing your browsing habits, including specific pages you view throughout the day.
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
+      Cross-site requests are also used in attacks on users who are browsing the web. Among the attacks that cross-site requests are used in, they are particularly dangerous with <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-Site Request Forgery</a> (CSRF) attacks where your browser is told to make a request to another website and that other website thinks you (the person) meant to make the request.</p>
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
-      </div>
+      <h3>What are the privacy benefits of using RequestPolicy?</h3>
+      <p>See <a href="#privacy">privacy benefits</a>.</p>
+
+      <h3>What are the security benefits of using RequestPolicy?</h3>
+      <p>See <a href="#privacy">security benefits</a>.</p>
+
+      <h3>Which kinds of requests are blocked?</h3>
+      <p>By default, any request the browser makes from the current site a user is on to a third-party site is blocked. Users can then whitelist specific sites (with various levels of granularity) to allow requests they approve of.</p>
+      <p>Request that are blocked include:</p>
+      <ul>
+        <li><b>Content of the current page that is from a different site:</b> Various tags in an HTML page tell the browser that more content is needed to display the current page. Normally, the browser immediately makes requests to third-party sites to obtain this content. The content can include images, JavaScript files, style sheet files, and many others.</li>
+        <li><b>Redirections from the current site to a different site:</b> Redirects tell your browser to load an entirely different website address than the one you are on or requested. Redirections can be caused by JavaScript, META refresh tags, and on headers.</li>
+        <li><b>Content a page tells your browser to "prefetch":</b> Some browsers, such as Firefox, allow any webpage to tell your browser to load other pages in the background. This is intended to allow a website to improve your browsing experience by guessing which pages you are likely to visit next so that those pages will load faster when you visit them. In Firefox 3.1, DNS prefetching was also added. DNS prefetching is where your browser tries to speed up future requests by resolving the IP address of every link on webpages you visit (just in case you decide to click on them). Read more about prefetching...</li>
+      </ul>
+      <p>Note that OCSP queries and CRL updates are not blocked. This means that RequestPolicy will not interfere with your browser's attempts to determine whether SSL certificates have been revoked.</p>
+
+      <h3>How are sites classified as "third-party sites"?</h3>
+      <p>A site is considered a third-party site if its registered domain name is different than the registered domain of the page that initiated the request. For example, the domains:</p>
+      <pre>
+      example.com
+      www.example.com
+      a.b.c.example.com
+      </pre>
+      <p>all have the same registered domain name (example.com) and so are considered the same site.</p>
+      <p>There is some risk posed by this default, but this level of granularity is the one with the optimal tradeoff of usability for privacy and security according to the needs of most users.</p>
+
+      <p>If you want protection against attacks that use subdomains, you can enable more strict site classification through the RequestPolicy preferences. Instead of classifying sites as the same based on the registered domain, you can choose to base it on the full domain (e.g. a.b.c.example.com) or even on the complete protocol + domain + port (e.g. http://a.b.c.example.com:81).</p>
+
+      <h3>Is RequestPolicy an alternative or competitor to NoScript?</h3>
+
+      <p>No! :)</p>
+
+      <p>NoScript is a tool that gives you a default deny policy for JavaScript, Java, Flash and other plugins. NoScript allows you to whitelist scripts and objects from domains you trust.</p>
+
+      <p>RequestPolicy is a tool that gives you a default deny policy for cross-site requests. RequestPolicy allows you to whitelist cross-site requests you trust.</p>
+
+      <p>RequestPolicy will protect you from various attacks that NoScript will not (such as CSRF attacks, though there some special cases that NoScript protects against) and will give you greater privacy while browsing.</p>
+
+      <p>Also, RequestPolicy will give you finer-grained control over JavaScript and plugins when you use it with NoScript. For example, if you whitelist a domain with NoScript to allow it to run JavaScript, then that domain will also be allowed to run JavaScript when you are on any other site that you have whitelisted with NoScript. RequestPolicy makes sure that when it is JavaScript from a third-party site, it will still be restricted unless you have allowed those cross-site requests.</p>
+
+      <p>Conversely, NoScript gives you protection that RequestPolicy does not. RequestPolicy will not keep you safe from malicious JavaScript or vulnerable plugins on the current site you are visiting, So, NoScript is absolutely essential for browser security.</p>
+
+      <p>Having two separate tools that each do their specific jobs well is the best approach. NoScript is an amazing extension and is absolutely essential (like RequestPolicy) to using Firefox securely. It is best to use both RequestPolicy and NoScript.</p>
+
+      <h3>What changes to my browser are left behind after uninstalling RequestPolicy?</h3>
+      <p>By default, when you uninstall or disable RequestPolicy, all changes RequestPolicy made to your browser's settings will be undone. Primarily this means that your default prefetching settings are restored to the browser's default settings. That is, DNS and link prefetching will be re-enabled when you uninstall RequestPolicy.</p>
+
+      <p>However, if you have gone to RequestPolicy's preference window and under the "Advanced" preferences you have disabled the options to "Restore default when RequestPolicy is uninstalled", then your browser's default prefetch settings will not be restored when you disable or uninstall RequestPolicy.</p>
+
+      <p>Privacy note: RequestPolicy will leave various RequestPolicy-specific settings and configuration files in your browser profile even after it has been uninstalled. For example, your whitelist will still be available to other people who have access to your computer. This is a known bug (see ticket #227). A future version of RequestPolicy will attempt to delete all RequestPolicy whitelist data, etc., when RequestPolicy is uninstalled.</p>
+
+      <p>In the mean time, if you are looking to remove all RequestPolicy-related files and configurations, you should go to the page about:config in your browser and "reset" every preference that starts with "extensions.requestpolicy". Starting with RequestPolicy version 0.6, you also should delete the "requestpolicy" directory which was created in your browser's profile directory (if you used multiple browser profiles, you will need to locate the one where you had installed RequestPolicy). If you have questions about verifying that you have correctly removed RequestPolicy data, please don't hesitate to contact us.</p>
+
+      <h3>Can websites detect that you are using RequestPolicy?</h3>
+      <p>Yes, they can. For more information, see detecting RequestPolicy.</p>
+
+      <h3>Is there a RequestPolicy for Chrome?</h3>
+      <p>Not yet. Until 2012, Google Chrome did not have the necessary APIs so that extensions could reliably block requests. Now that they've added those, there just needs to be someone with hundreds of hours of time to figure out if those APIs are sufficient and to try to port RequestPolicy to Chrome. :)</p>
     </div>
-
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <div class="row">
+      <h1 id="privacy">Privacy</h1>
+    </div>
+    <div class="row">
+      <h1 id="security">Security</h1>
+    </div>
+    <div class="row">
+      <h1>Beta</h1>
+    </div>
+    <div class="row">
+      <h1>About</h1>
+    </div>
   </body>
 </html>
