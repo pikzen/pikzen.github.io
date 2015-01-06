@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Launcher</title>
+		<style>
+			body, html {
+				padding: 0; margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.container {
+				width: 100%;
+				height: 100%;
+				background-attachment: fixed;
+				background-size: cover;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+				z-index: 0;
+			}
+			.move {
+				height: 100px;
+				width: 200px;
+				background-color: #222;
+				transform: skewX(-10deg);
+				-moz-transform: skewX(-10deg);
+				display: inline-block;
+				color: white;
+				font-family: 'DejaVu Sans';
+				font-weight: 200;
+				font-size: 10pt;
+				padding-left: 20px;
+				padding-right: 20px;
+				text-align: center;
+				cursor: pointer;
+				border: 1px solid transparent;
+				margin-right: 5px;
+			}
+
+			.move:hover {
+				background-color: #111;
+			}
+
+			.move.selected {
+				background-color: lightblue;
+			}
+			.listcontainer {
+				padding: 10px;
+				overflow: hidden;
+				margin: 0 auto;
+				z-index: 2;
+				overflow: hidden;
+				transform: translateX(100px);
+				transition: transform 0.3s ease-out;
+			}
+			.icon {
+				display: block;
+				text-align: center;
+				margin: 0 auto;
+			}
+			.herp {
+				position: absolute;
+				bottom: 200px;
+				overflow: hidden;
+				width: 9999999999%;
+				height: 100px;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		</div>
+		<div class="herp minwidth">
+			<div class="listcontainer" id="listcontainer">
+			</div>
+		</div>
+
+		<script>
+			if (!String.prototype.format) {
+			  String.prototype.format = function() {
+			    var args = arguments;
+			    return this.replace(/{(\d+)}/g, function(match, number) { 
+			      return typeof args[number] != 'undefined'
+			        ? args[number]
+			        : match
+			      ;
+			    });
+			  };
+			}
+
+			var data = [
+				{name: 'Battlefield: Bad Company 2', image: '', background: 'http://static.gamespot.com/uploads/original/1493/14930800/2387233-9382136948-battl.jpg', command: ''},
+				{name: 'Alien Swarm', image: '', background: 'http://cdn.akamai.steamstatic.com/steam/apps/630/ss_c95b51026c6523796a6d9fe6ddbfd31558d04af5.1920x1080.jpg', command: ''},
+				{name: 'Amnesia: The Dark Descent', image: '', background: '', command: ''},
+				{name: 'Black Mesa', image: '', background: '', command: ''},
+				{name: 'Borderlands 2', image: '', background: '', command: ''},
+				{name: 'Counter-Strike: Global Offensive', image: '', background: '', command: ''},
+				{name: 'Counter-Strike: Source', image: '', background: '', command: ''},
+				{name: 'Dark Souls', image: '', background: '', command: ''},
+				{name: 'Dark Souls II', image: '', background: '', command: ''},
+				{name: 'Deus Ex', image: '', background: '', command: ''},
+				{name: 'Dishonored', image: '', background: '', command: ''},
+				{name: 'The Elder Scrolls: Skyrim', image: '', background: '', command: ''},
+				{name: 'Electronic Super Joy', image: '', background: '', command: ''},
+				{name: 'Frozen Synapse', image: '', background: '', command: ''},
+				{name: 'Garry\'s Mod', image: '', background: '', command: ''},
+				{name: 'Half-Life 2', image: '', background: '', command: ''},
+				{name: 'Half-Life 2 : Episode One', image: '', background: '', command: ''}
+			];
+
+			var template = "<div class='move'><span class='icon'><img src='{0}'></span>{1}</div>";
+			var list = document.getElementById("listcontainer");
+			var range = document.createRange();
+			for (var i = 0; i < data.length; i++) {
+				var link = data[i];
+				
+				var elem = range.createContextualFragment(template.format(link.image, link.name));
+
+				list.appendChild(elem);
+			}
+			
+			var selectedIndex = 0;
+			var elements = document.getElementsByClassName('move');
+			var container = document.querySelector('.container');
+			var linklist = document.querySelector('.listcontainer');
+			container.style.backgroundImage = "url('{0}')".format(data[selectedIndex].background);
+
+			linklist.children[selectedIndex].classList.add('selected');
+
+			for (var i = 0; i < elements.length; i++) {
+				var item = elements[i];
+
+				(function(index){
+
+					document.onkeypress = function(evt) {
+						if (evt.keyCode === 37) { // Left
+							if (selectedIndex - 1 < 0) {
+								return false;
+							}
+							linklist.children[selectedIndex].classList.remove('selected');
+							linklist.children[selectedIndex - 1].classList.add('selected');
+							container.style.backgroundImage = "url('{0}')".format(data[selectedIndex - 1].background);
+							linklist.style.transform = "translateX({0})".format(300 - (200*selectedIndex) + "px");
+
+							selectedIndex--;
+							return false;
+						}
+						else if (evt.keyCode === 39) { // Right
+							if (selectedIndex + 1 >= data.length) {
+								return false;
+							}
+							linklist.children[selectedIndex].classList.remove('selected');
+							linklist.children[selectedIndex + 1].classList.add('selected');
+							container.style.backgroundImage = "url('{0}')".format(data[selectedIndex + 1].background);
+							linklist.style.transform = "translateX({0})".format(100 - (200*selectedIndex) + "px");
+
+							selectedIndex++;
+							return false;
+						}
+					}
+					item.onclick = function() {
+					}
+				})(i);
+			}
+		</script>
+	</body>
+</html>
