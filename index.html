@@ -1,117 +1,221 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RequestPolicy (Continued)</title>
-    <link rel="stylesheet" href="/stylesheets/app.css" />
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div class="row header">
-      <div class="large-12 columns">
-        <h1 class="requestpolicy">RequestPolicy</h1>
-        <h2 class="continued">(Continued)</h2>
-        <p>RequestPolicy is an extension for Mozilla browsers that increases your browsing privacy, security, and speed by giving you control over cross-site requests on pages you visit.</p>
-        <div class="button download-button">
-          <h3>Download RequestPolicy</h3>
-          <h4>Addon for Mozilla Firefox</h4>
-        </div>
-      </div>
-    </div>
-    <div data-magellan-expedition="fixed" class="row navigation">
-      <dl class="row sub-nav">
-        <dd><a class="faq-link header-link" href="#faq">FAQ</a></dd>
-        <dd><a class="privacy-link header-link" href="#privacy">Privacy</a></dd>
-        <dd><a class="security-link header-link" href="#security">Security</a></dd>
-        <dd><a class="github-link header-link" href="https://github.com/RequestPolicyContinued/requestpolicy/" class="out-link">GitHub</a></dd>
-        <dd><a class="issues-link header-link" href="https://github.com/RequestPolicyContinued/requestpolicy/issues" class="out-link">Issues</a></dd>
-        <dd><a class="beta-link header-link" href="#beta">Beta</a></dd>
-        <dd><a class="about-link header-link" href="#about">About</a></dd>
-      </dl>
-    </div>
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Florian Eula</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Software developer" />
+		<meta name="keywords" content="software developer france" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
 
-    <div class="row">
-      <h1 id="faq">Frequently Asked Questions</h1>
-      <h3>What are cross-site requests?</h3>
-      <p>Cross-site requests are requests that your browser is told to make by a website you are visiting to a completely different website. Though usually legitimate requests, they often result in advertising companies and other websites knowing your browsing habits, including specific pages you view throughout the day.
+		<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header" class="container">
 
-      Cross-site requests are also used in attacks on users who are browsing the web. Among the attacks that cross-site requests are used in, they are particularly dangerous with <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-Site Request Forgery</a> (CSRF) attacks where your browser is told to make a request to another website and that other website thinks you (the person) meant to make the request.</p>
+					<!-- Logo -->
+						<h1 id="logo"><a href="index.html">Florian Eula</a></h1>
 
-      <h3>What are the privacy benefits of using RequestPolicy?</h3>
-      <p>See <a href="#privacy">privacy benefits</a>.</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#professional">Professional work</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li class="break"><a href="#contact">Contact me</a></li>
+								<li><a href="#other">Other info</a></li>
+							</ul>
+						</nav>
 
-      <h3>What are the security benefits of using RequestPolicy?</h3>
-      <p>See <a href="#privacy">security benefits</a>.</p>
+				</div>
 
-      <h3>Which kinds of requests are blocked?</h3>
-      <p>By default, any request the browser makes from the current site a user is on to a third-party site is blocked. Users can then whitelist specific sites (with various levels of granularity) to allow requests they approve of.</p>
-      <p>Request that are blocked include:</p>
-      <ul>
-        <li><b>Content of the current page that is from a different site:</b> Various tags in an HTML page tell the browser that more content is needed to display the current page. Normally, the browser immediately makes requests to third-party sites to obtain this content. The content can include images, JavaScript files, style sheet files, and many others.</li>
-        <li><b>Redirections from the current site to a different site:</b> Redirects tell your browser to load an entirely different website address than the one you are on or requested. Redirections can be caused by JavaScript, META refresh tags, and on headers.</li>
-        <li><b>Content a page tells your browser to "prefetch":</b> Some browsers, such as Firefox, allow any webpage to tell your browser to load other pages in the background. This is intended to allow a website to improve your browsing experience by guessing which pages you are likely to visit next so that those pages will load faster when you visit them. In Firefox 3.1, DNS prefetching was also added. DNS prefetching is where your browser tries to speed up future requests by resolving the IP address of every link on webpages you visit (just in case you decide to click on them). Read more about prefetching...</li>
-      </ul>
-      <p>Note that OCSP queries and CRL updates are not blocked. This means that RequestPolicy will not interfere with your browser's attempts to determine whether SSL certificates have been revoked.</p>
+				<!-- Hero -->
+					<section id="hero" class="container">
+						<header>
+							<h2>Software developer</h2>
+						</header>
+						<p>Currently in an engineering degree at <a href="https://esir.univ-rennes1.fr/">ESIR</a></p>
+						<ul class="actions">
+							<li><a href="#" class="button">Get in touch.</a></li>
+						</ul>
+					</section>
 
-      <h3>How are sites classified as "third-party sites"?</h3>
-      <p>A site is considered a third-party site if its registered domain name is different than the registered domain of the page that initiated the request. For example, the domains:</p>
-      <pre>
-      example.com
-      www.example.com
-      a.b.c.example.com
-      </pre>
-      <p>all have the same registered domain name (example.com) and so are considered the same site.</p>
-      <p>There is some risk posed by this default, but this level of granularity is the one with the optimal tradeoff of usability for privacy and security according to the needs of most users.</p>
+			</div>
 
-      <p>If you want protection against attacks that use subdomains, you can enable more strict site classification through the RequestPolicy preferences. Instead of classifying sites as the same based on the registered domain, you can choose to base it on the full domain (e.g. a.b.c.example.com) or even on the complete protocol + domain + port (e.g. http://a.b.c.example.com:81).</p>
+		<!-- Features 1 -->
+			<div class="wrapper" id="professional">
+				<h1 class="wrapper-header">Professional work</h1>
+				<div class="container">
+					<div class="row">
+						<section class="6u 12u(narrower) feature">
+							<div class="image-wrapper first">
+								<a href="https://guestapp.me/	" class="image featured first"><img src="images/pic01.jpg" alt="" /></a>
+							</div>
+							<header>
+								<h2><a href="https://guestapp.me/">GuestApp</a></h2>
+							</header>
+							<p>Developped a mobile application using Cordova and EmberJS as well as web integration and web development.</p>
+						</section>
+						<section class="6u 12u(narrower) feature">
+							<div class="image-wrapper">
+								<a href="https://tnthéatre.com/" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							</div>
+							<header>
+								<h2><a href="https://tntheatre.com/">Terrain Neutre Théatre</a></h2>
+							</header>
+							<p>Web development and design<br/><br></p>
+						</section>
+					</div>
+				</div>
+			</div>
 
-      <h3>Is RequestPolicy an alternative or competitor to NoScript?</h3>
+		<!-- Promo -->
+			<div id="promo-wrapper">
+				<section id="projects">
+					<h3 class="contrast-invert">This is what I do in my free time</h3>
+					<p>Well, not everything. Just software stuff.</p>
+				</section>
+			</div>
 
-      <p>No! :)</p>
+		<!-- Features 2 -->
+			<div class="wrapper no-padding" >
+				<section class="container">
+					<div class="row features">
+						<section class="4u 12u(narrower) feature">
+							<div>
+								<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">Shaarli</h4>
+						</section>
+						<section class="4u 12u(narrower) feature">
+							<div class="">
+								<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">ffbookmark</h4>
+						</section>
+						<section class="4u 12u(narrower) feature">
+							<div class="">
+								<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">bl2checklist</h4>
+						</section>
+					</div>
+					<div class="row ">
+						<section class="4u 12u(narrower) feature">
+							<div>
+								<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">Shaarli</h4>
+						</section>
+						<section class="4u 12u(narrower) feature">
+							<div class="">
+								<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">ffbookmark</h4>
+						</section>
+						<section class="4u 12u(narrower) feature">
+							<div class="">
+								<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							</div>
+							<h4 class="project-name">bl2checklist</h4>
+						</section>
+					</div>
+					<ul class="actions major">
+						<li><a href="https://github.com/pikzen/" class="button">Check it out on github</a></li>
+					</ul>
+				</section>
+			</div>
 
-      <p>NoScript is a tool that gives you a default deny policy for JavaScript, Java, Flash and other plugins. NoScript allows you to whitelist scripts and objects from domains you trust.</p>
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<div id="footer" class="container">
+					<header class="major" id="contact">
+						<h2>Get in touch with me!</h2>
+						<p>I'm actually looking for an internship right now, so feel free to shoot me a mail if you're interested and you're in software development.</p>
+					</header>
+					<div class="row">
+						<section class="12u 12u(narrower)">
+							<form method="post" action="#">
+								<div class="row 50%">
+									<div class="6u 12u(mobile)">
+										<input name="name" placeholder="Name" type="text" />
+									</div>
+									<div class="6u 12u(mobile)">
+										<input name="email" placeholder="Email" type="text" />
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<label class="antispam-info">Hey, just to be sure you're not a robot, could you set this slider all the way to the right ?</label><input type="range" value="2" min="1" max="3" class="antispam-info" id="antispam-input" onblur="refreshNoSpamValue(this.value)" onchange="refreshNoSpamValue(this.value)"/><span id="antispam"></span>
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear form" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+				<div class="container bordered-top">
+					<div class="row">
+						<div class="12u">
+						<p>My public key fingerprint is <span class="code">b1:46:b0:f1:48:ae:4f:8d:4d:04:ec:b9:a5:39:51:5c</span>. Grab it <a href="/feula_rsa.pub">here</a>.<br/>
+						If you want to send me a mail directly, use <span id="email-holder"></span><noscript> (Uh oh, looks like you disabled javascript, and I'm using it to display that address. Re-enable javascript, or contact me on the various services below</noscript></p>
+						</div>
+					</div>
+				</div>
+				<div id="copyright" class="container">
+					<ul class="menu">
+						<li>&copy; Florian EULA, All rights reserved.</li><li>Thanks to <a href="http://html5up.net">HTML5 UP</a> for the design, because I'm awful at this.</li>
+					</ul>
+					<p>All images are licensed under the Creative Commons License</p>
+				</div>
+			</div>
+		<script>
+			function refreshNoSpamValue(val) {
+				console.log("hi");
+				if (val == 3) {
+					document.getElementById("antispam").textContent = "Great, thanks!";
+				}
+				else {
+					document.getElementById("antispam").textContent = ":(";
+				}
+			}
 
-      <p>RequestPolicy is a tool that gives you a default deny policy for cross-site requests. RequestPolicy allows you to whitelist cross-site requests you trust.</p>
-
-      <p>RequestPolicy will protect you from various attacks that NoScript will not (such as CSRF attacks, though there some special cases that NoScript protects against) and will give you greater privacy while browsing.</p>
-
-      <p>Also, RequestPolicy will give you finer-grained control over JavaScript and plugins when you use it with NoScript. For example, if you whitelist a domain with NoScript to allow it to run JavaScript, then that domain will also be allowed to run JavaScript when you are on any other site that you have whitelisted with NoScript. RequestPolicy makes sure that when it is JavaScript from a third-party site, it will still be restricted unless you have allowed those cross-site requests.</p>
-
-      <p>Conversely, NoScript gives you protection that RequestPolicy does not. RequestPolicy will not keep you safe from malicious JavaScript or vulnerable plugins on the current site you are visiting, So, NoScript is absolutely essential for browser security.</p>
-
-      <p>Having two separate tools that each do their specific jobs well is the best approach. NoScript is an amazing extension and is absolutely essential (like RequestPolicy) to using Firefox securely. It is best to use both RequestPolicy and NoScript.</p>
-
-      <h3>What changes to my browser are left behind after uninstalling RequestPolicy?</h3>
-      <p>By default, when you uninstall or disable RequestPolicy, all changes RequestPolicy made to your browser's settings will be undone. Primarily this means that your default prefetching settings are restored to the browser's default settings. That is, DNS and link prefetching will be re-enabled when you uninstall RequestPolicy.</p>
-
-      <p>However, if you have gone to RequestPolicy's preference window and under the "Advanced" preferences you have disabled the options to "Restore default when RequestPolicy is uninstalled", then your browser's default prefetch settings will not be restored when you disable or uninstall RequestPolicy.</p>
-
-      <p>Privacy note: RequestPolicy will leave various RequestPolicy-specific settings and configuration files in your browser profile even after it has been uninstalled. For example, your whitelist will still be available to other people who have access to your computer. This is a known bug (see ticket #227). A future version of RequestPolicy will attempt to delete all RequestPolicy whitelist data, etc., when RequestPolicy is uninstalled.</p>
-
-      <p>In the mean time, if you are looking to remove all RequestPolicy-related files and configurations, you should go to the page about:config in your browser and "reset" every preference that starts with "extensions.requestpolicy". Starting with RequestPolicy version 0.6, you also should delete the "requestpolicy" directory which was created in your browser's profile directory (if you used multiple browser profiles, you will need to locate the one where you had installed RequestPolicy). If you have questions about verifying that you have correctly removed RequestPolicy data, please don't hesitate to contact us.</p>
-
-      <h3>Can websites detect that you are using RequestPolicy?</h3>
-      <p>Yes, they can. For more information, see detecting RequestPolicy.</p>
-
-      <h3>Is there a RequestPolicy for Chrome?</h3>
-      <p>Not yet. Until 2012, Google Chrome did not have the necessary APIs so that extensions could reliably block requests. Now that they've added those, there just needs to be someone with hundreds of hours of time to figure out if those APIs are sufficient and to try to port RequestPolicy to Chrome. :)</p>
-    </div>
-    <div class="row">
-      <h1 id="privacy">Privacy</h1>
-    </div>
-    <div class="row">
-      <h1 id="security">Security</h1>
-    </div>
-    <div class="row">
-      <h1>Beta</h1>
-    </div>
-    <div class="row">
-      <h1>About</h1>
-    </div>
-  </body>
+			function displayEmail() {
+				var address = "eula.florian";
+				var hostname = "gmail.com";
+				document.getElementById('email-holder').innerHTML = "<a href='mailto:" + address + "@" + hostname + "'>" + address + "@" + hostname + "</a>";
+			}
+			window.onload = function() {
+				console.log("hi");
+				refreshNoSpamValue(document.getElementById("antispam-input").value)
+				displayEmail();
+			}
+		</script>
+	</body>
 </html>
-
