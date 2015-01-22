@@ -110,11 +110,7 @@
 			var video_list = document.getElementById('video-list');
 			var current_video_id = 0;
 			var videos = [];
-
-			function onYouTubePlayerReady(params) {
-				console.log("Player ready !");
-				console.log(params);
-			}
+			
 			function create_yt_player(id) {
 				iframe.src = "http://www.youtube.com/v/" + id + "?autoplay=1&version=3&controls=1&enablejsapi=1";
 				video_name.textContent = video_data.items[0].snippet.title;
