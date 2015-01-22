@@ -1,0 +1,116 @@
+@import "settings";
+//@import "foundation";
+
+// Or selectively include components
+@import "foundation/components/block-grid";
+@import "foundation/components/buttons";
+@import "foundation/components/grid";
+//   "foundation/components/pricing-tables",
+//   "foundation/components/sub-nav",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/top-bar",
+//   "foundation/components/visibility";
+
+$header_red   : #EC6363;
+$button_green : #52A964;
+$text_color   : #333333;
+
+h1 {
+	font-family: 'Montserrat';
+}
+
+h2 {
+	font-family: 'Raleway';
+	font-weight: 300;
+}
+
+a {
+	color: #208888;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+//==============================================================================
+// Header specific
+//==============================================================================
+
+.header {
+	background-color: $header_red;
+	max-height: 350px;
+	height: 100%;
+	color: white;
+	text-align: center;
+
+	h1, h2 {
+		text-align: center;
+		text-shadow: 0px 0px 5px black;
+	}
+
+	p {
+		text-align: center;
+		font-family: 'Montserrat';
+		margin: 70px;
+	}
+
+	.requestpolicy {
+		margin-bottom: 0;
+		line-height: 0em;
+		margin-top: 40px;
+	}
+
+	.continued {
+		line-height: 0.3em;
+		margin-left: 140px;
+	}
+
+	&.row {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		max-width: initial;
+	}
+
+	.download-button {
+		margin: 0 auto;
+		text-align: center;
+		box-shadow: 0 0 10px 1px #333;
+	}
+}
+
+.download-button {
+	background-color: $button_green;
+
+	&:hover {
+		background-color: darken($button_green, 10);
+	}
+}
+
+//==============================================================================
+// Navigation
+//==============================================================================
+.sub-nav {
+	list-style-type: none;
+	width: 100%;
+	margin-top: 0;
+	text-align: center;
+
+	dd {
+		display: inline-block;
+		margin-left: 0;
+
+		a {
+			display: inline-block;
+			height: 60px;
+			line-height: 60px;
+			padding-left: 30px;
+			padding-right: 30px;
+			color: $text_color;
+			text-decoration: none;
+			transition: border-color 0.5s linear;
+			&:hover {
+				border-bottom: 4px solid $header_red;
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+header {
+	width: 100%;
+	background-image: url("../images/header.jpg");
+	background-size: 100% 100%;
+
+	transition: height linear 0.5s;
+}
+
+body {
+	background-color: #eee;
+}
+
+header.fully-open {
+	height: 250px;
+}
+
+header.minimal-size {
+	height: 80px;
+}
+
+header h1 {
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px #222;
+	margin-top: 0;
+}
+
+md-card {
+	background-color: white;
+}
+
+header.fully-open h1 {
+	padding-top: 110px;
+}
+
+header.minimal-size h1 {
+	padding-top: 10px;
+}
+
+body, html {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+md-tab {
+	background-color: #009999;
+}
+
+.search-controls-holder {
+	text-align: center;
+	width: 100%;
+}
+
+.search-controls-holder input[type="text"] {
+	border-bottom: 1px solid #444;
+	width: 50%;
+	background: none;
+	margin: 0 auto;
+	padding-top: 0px;
+}
+
+.search-more-options {
+	margin: 0 auto;
+}
+
+.search-text {
+
+	height: 80px;
+	box-shadow: 5px 0px 5px #000;
+}
+
+.close-button {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 18pt;
+	cursor: pointer;
+}
+.close-button: hover {
+	background-color: #ddd;
+}
+
+.filter-list .category{
+	display: inline-block;
+	min-width: 20%;
+}
+
+md-checkbox {
+	display: block;
+}
+
+.filter-list .category md-button {
+	display: block;
+}
+
+.item-card {
+	width: 250px;
+	display: inline-block;
+}
+
+.item-flair {
+	color: red;
+}
+.item-name {
+	font-weight: 400;
+	text-align: center;
+}
+
+.item-picture.owned.legendary {
+	background-color: orange;
+}
+.item-picture.owned.unique {
+	background-color: blue;
+}
+.item-picture.owned.pearlescent {
+	background-color: lightblue;
+}
+.item-picture.owned.seraph {
+	background-color: pink;
+}
+.item-picture.owned.eridian {
+	background-color: purple;
+}
+
+.item-picture  {
+	height: 20px;
+	width: calc(100% + 20px);
+	background-color: #888;
+	margin-left: -10px;
+	margin-right: 10px;
+}
+
+.itemList {
+	width: 80%;
+	margin: 0 auto;
+}
