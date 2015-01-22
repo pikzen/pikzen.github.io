@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>YTRand</title>
+		<meta charset="utf-8">
+		<style>
+
+			body {
+				width: 70%;
+				min-width: 960px;
+			}
+			header {
+				text-align: center;
+				width: 100%;
+			}
+
+			.input-holder {
+				width: 100%;
+			}
+
+			.yt-input {
+				width: 80%;
+			}
+
+			.youtube-holder {
+				width: 60px;
+			}
+			.list-holder {
+				width: 30%;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Random Related Relativity Youtube</h1>
+		</header>
+		<div class="input-holder">
+			<input class="yt-input" id="input-elem" type="text" placeholder="URL...">
+		</div>
+		<div class="youtube-holder">
+			<h1 class="video-title">No video yet :(</h1>
+		</div>
+		<div class="list-holder">
+		</div>
+
+		<script>
+			var APIKey = "AIzaSyC72FIb3BRiJjOmKAMY0zU8ZKFY9edo0mI";
+			function related(videoId) {
+				var request = "https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=" + videoId + 
+							  "&type=video&key=" + APIKey;
+				return get_json(request);
+			}
+			function video(videoId) {
+				var request = "https://www.googleapis.com/youtube/v3/videos?id=" + videoId + 
+							  "&key=" + APIKey + "&part=snippet,contentDetails,statistics,status";
+				return get_json(request);	
+			}
+			function get_json(url) {
+				var request = new XMLHTTPRequest();
+				var data;
+				request.open('GET', url, true);
+
+				request.onload = function() {
+					if (request.status >= 200 && request.status <= 400) {
+						data = JSON.parse(request.responseText);
+					}
+					else {
+						data = {error: true};
+					}
+				};
+
+				request.onerror = function() {
+					data = {error: true};
+				};
+
+				request.send();
+			}
+
+			function validate_and_extract_id(input) {
+				var regex = /(.*)youtube.com\/watch?v=(.*)(&.*)?/g;
+				var matches = regex.exec(input);
+
+				console.table(matches);
+			}
+
+			var input_elem = document.getElementById("input-elem");
+			input_elem.addEventListener("keydown", function(e) {
+				if (e.keyCode == 13) validate_and_extract_id(input_elem.value);
+			});
+
+
+		</script
+	</body>
+</html>
