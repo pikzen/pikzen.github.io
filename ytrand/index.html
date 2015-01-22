@@ -8,6 +8,7 @@
 			body {
 				width: 70%;
 				min-width: 960px;
+				font-family: 'Open Sans';
 			}
 			header {
 				text-align: center;
@@ -23,7 +24,11 @@
 			}
 
 			.youtube-holder {
-				width: 60px;
+				width: 60%;
+			}
+
+			.youtube-holder h1 {
+				font-weight: lighter;
 			}
 			.list-holder {
 				width: 30%;
@@ -40,6 +45,7 @@
 		</div>
 		<div class="youtube-holder">
 			<h1 class="video-title">No video yet :(</h1>
+			<div id="video-elem"></div>
 		</div>
 		<div class="list-holder">
 		</div>
@@ -57,7 +63,7 @@
 				return get_json(request);	
 			}
 			function get_json(url) {
-				var request = new XMLHTTPRequest();
+				var request = new XMLHttpRequest();
 				var data;
 				request.open('GET', url, true);
 
@@ -68,6 +74,9 @@
 					else {
 						data = {error: true};
 					}
+
+					console.log(request);
+					fill_video(data);
 				};
 
 				request.onerror = function() {
@@ -78,10 +87,15 @@
 			}
 
 			function validate_and_extract_id(input) {
-				var regex = /(.*)youtube.com\/watch?v=(.*)(&.*)?/g;
+				var regex = new RegExp('(.*)\?v\=(.*)');
 				var matches = regex.exec(input);
+				if (!regex.test(input)) {
+					return false;
+				}
 
-				console.log(matches);
+				console.log(regex.exec(input)[2]);
+				console.log(video(matches[2]));
+
 			}
 
 			var input_elem = document.getElementById("input-elem");
