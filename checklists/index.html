@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1 class="container">Borderlands Checklist</h1>
+	</header>
+	<div class="search-box">
+		<div class="search-input">
+			<input type="text" placeholder="Search for a weapon..." data-bind="textInput: rules_search"/>
+		</div>
+		<div data-bind="css: searchbox_classes">
+			<div class="container">
+				<h4>ITEM RARITY</h4>
+				<div class="rule"><input value="legendary" data-bind="checked: rules_tags"  type="checkbox"><label>Legendary</label></div>
+				<div class="rule"><input value="pearl" data-bind="checked: rules_tags"  type="checkbox"><label>Pearlescent</label></div>
+				<div class="rule"><input value="seraph" data-bind="checked: rules_tags"  type="checkbox"><label>Seraph</label></div>
+				<h4>WEAPON TYPES</h4>
+				<div class="rule"><input value="pistol" data-bind="checked: rules_tags" type="checkbox"><label>Pistol</label></div>
+				<div class="rule"><input value="rifle" data-bind="checked: rules_tags"  type="checkbox"><label>Rifle</label></div>
+				<div class="rule"><input value="rockets" data-bind="checked: rules_tags"  type="checkbox"><label>Rocket Launcher</label></div>
+				<div class="rule"><input value="sniper" data-bind="checked: rules_tags"  type="checkbox"><label>Sniper Rifles</label></div>
+				<div class="rule"><input value="shotgun" data-bind="checked: rules_tags"  type="checkbox"><label>Shotguns</label></div>
+				<div class="rule"><input value="smg" data-bind="checked: rules_tags"  type="checkbox"><label>Submachine guns</label></div>
+				<div class="rule"><input value="machinegun" data-bind="checked: rules_tags"  type="checkbox"><label>Support machine gun</label></div>
+				<h4>MANUFACTURERS</h4>
+				<div class="rule"><input value="dahl" data-bind="checked: rules_tags"  type="checkbox"><label>Dahl</label></div>
+				<div class="rule"><input value="torgue" data-bind="checked: rules_tags"  type="checkbox"><label>Torgue</label></div>
+				<div class="rule"><input value="hyperion" data-bind="checked: rules_tags"  type="checkbox"><label>Hyperion</label></div>
+				<div class="rule"><input value="atlas" data-bind="checked: rules_tags"  type="checkbox"><label>Atlas</label></div>
+				<div class="rule"><input value="maliwan" data-bind="checked: rules_tags"  type="checkbox"><label>Maliwan</label></div>
+				<div class="rule"><input value="sands" data-bind="checked: rules_tags"  type="checkbox"><label>S&amp;S Munitions</label></div>
+				<div class="rule"><input value="tediore" data-bind="checked: rules_tags"  type="checkbox"><label>Tediore</label></div>
+				<div class="rule"><input value="eridian" data-bind="checked: rules_tags"  type="checkbox"><label>Eridian</label></div>
+				<div class="rule"><input value="vladof" data-bind="checked: rules_tags"  type="checkbox"><label>Vladof</label></div>
+				<div class="rule"><input value="jakobs" data-bind="checked: rules_tags"  type="checkbox"><label>Jakobs</label></div>
+				<div class="rule"><input value="bandit" data-bind="checked: rules_tags"  type="checkbox"><label>Bandit</label></div>
+				<h4>GAME</h4>
+				<div class="rule"><input value="bl1" data-bind="checked: rules_tags"  type="checkbox"><label>Borderlands</label></div>
+				<div class="rule"><input value="bl2" data-bind="checked: rules_tags"  type="checkbox"><label>Borderlands 2</label></div>
+				<div class="rule"><input value="bltps" data-bind="checked: rules_tags"  type="checkbox"><label>Borderlands: The Pre-Sequel</label></div>
+				<h4>OTHERS</h4>
+				<div class="rule"><input type="checkbox" data-bind="checked: rules_hide_owned"><label>Hide owned items.</label></div>
+			</div>
+		</div>
+		<div class="search-expanded-box"></div>
+		<div class="search-expanded-show" data-bind="click: toggle_expanded_search">
+			<span data-bind="css: {search_visible: !search_is_expanded(), search_option: true}">More options v</span>
+			<span data-bind="css: {search_visible:  search_is_expanded(), search_option: true}">Fewer options ^</span>
+		</div>
+	</div>
+	<div class="item-list">
+		<div class="container">
+			<div class="three columns">
+				<span class="hidden">Nope</span>
+			</div>
+			<div class="seven columns">
+				<span class="hidden">Nope</span>
+			</div>
+			<div data-bind="css: {hidden: weapons_visible().length == 0, two: true, columns: true}">
+				Got that weapon ?
+			</div>
+		</div>
+		<div data-bind="foreach: weapons_visible" class="container">
+			<div data-bind="css: display_box">
+				<div class="weapon-image three columns">
+					<!--<img data-bind="attr: {src: image_src}">-->
+					<img src="http://placehold.it/150x50" />
+				</div>
+				<div class="weapon-info seven columns">
+					<h3 class="weapon-info-name" data-bind="text: name"></h3>
+					<h5 class="weapon-info-flavor" data-bind="text: flavor"></h5>
+				</div>
+				<div class="weapon-owned two columns left-bordered">
+					<input type="checkbox" class="weapon-owned-checkbox" checked data-bind="attr: {id: 'weapon_owned_name_' + name}, checked: owned">
+					<label data-bind="css: {weapon_owned_label_owned: owned, weapon_owned_label: true}, attr: {for: 'weapon_owned_name_' + name}, click: $root.toggle_weapon(id)">✔</label>
+				</div>
+			</div>
+		</div>
+		<div data-bind="css: no_results">
+			<h2 class="centered">Couldn't find any weapon matching your criteria :(</h2>
+		</div>
+	</div>
+	<footer>
+	</footer>
+
+	<script src="js/knockout-3.2.0-dev.js"></script>
+	<script src="src/polyfills.js"></script>
+	<script src="src/_version.js"></script>
+	<script src="src/_data.js"></script>
+	<script src="src/Weapon.js"></script>
+	<script src="src/App.js"></script>
+</body>
+</html>

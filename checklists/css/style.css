@@ -1,0 +1,178 @@
+body {
+	background-color: #eaeaea;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Helvetica Neue';
+	font-weight: 400;
+}
+
+header {
+	height: 150px;
+	background-color: #444;
+	background-image: url("http://ggstatic.com/productimages/borderlands-2--mac-creature-slaughterdome_1_ss_l_130717113359.jpg");
+	background-position: 25% 25%;
+	background-size: 75%;
+	color: white;
+}
+
+header h1 {
+	text-align: center;
+	line-height: 150px;
+}
+.search-box {
+	color: white;
+}
+
+.search-box h1,
+.search-box h2,
+.search-box h3,
+.search-box h4,
+.search-box h5,
+.search-box h6 {
+	color: #FF9600;
+}
+
+.search-box .search-input {
+	background-color: #222;
+}
+
+.search-box .search-input input{
+	width: 90%;
+	background-color: #222;
+	margin: 0 auto;
+	margin-left: 5%;
+	border: none;
+	height: 48px;
+	font-size: 24px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.search-box .rule {
+	display: inline-block;
+	padding-right: 50px;
+	min-width: 150px;
+}
+
+.search-box .rule input, .search-box .rule label {
+	display: inline;
+}
+
+.search-box .search_expanded {
+	transform: scaleY(0);
+	transition: transform 0.5s linear;
+	transform-origin: 50% 0;
+	background-color: #222;
+	margin-bottom: -5px;
+	display: none;
+}
+
+.search-box .search_expanded_display {
+	transform: scaleY(1);
+	display: block;
+}
+
+.search-box .search-expanded-show {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: -30px;
+	text-transform: uppercase;
+	color: #FF9600;
+	cursor: pointer;
+}
+
+.search-box .search-expanded-show .search_not_expanded {
+	display: none;
+}
+
+.search-box .search-expanded-box {	
+	width: 50%;
+	margin: 0 auto;
+
+	border-top: 30px solid #222;
+
+	border-right: 30px solid transparent;
+	border-left: 30px solid transparent;
+}
+
+.search-box .search-expanded-box:hover {
+	background-color: #111;
+}
+
+.search-box .search_option {
+	display: none;
+}
+
+.search-box .search_option.search_visible {
+	display: inline;
+}
+
+.weapon_display {
+	border-bottom: 3px solid #FF9600;
+	background-color: white;
+	box-shadow: 0 0 2px 2px #ccc;
+	margin-bottom: 10px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.weapon_display h5 {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	color: red;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.centered {
+	text-align: center;
+}
+
+.weapon-image {
+	text-align: center;
+}
+
+.weapon-image img {
+	padding-top: 20px;
+}
+
+.weapon-info-name {
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
+.weapon-owned-checkbox {
+	display: none !important;
+}
+
+.weapon_owned_label {
+	width: 24px;
+	height: 24px;
+	background-color: white;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	margin-top: 30px;
+	transition: box-shadow 0.2s linear;
+}
+
+.weapon_owned_label:hover {
+	cursor: pointer;
+	box-shadow: 0 0 2px 2px #888;
+}
+
+.weapon_display.weapon_display_owned {
+	background-color: #d0d0d0;
+}
+
+.weapon_owned_label {
+	text-indent: -9999px;
+}
+
+.weapon_owned_label.weapon_owned_label_owned {
+	text-indent: 0;
+	font-size: 32pt;
+	line-height: 12px;
+}
