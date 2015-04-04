@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<title>Path of Exile | Loot Filters</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="eight columns">
+				<div class="row" style="min-height: 60vh; padding: 10px;">
+					<span class="action-link" data-bind="click: addNewFilter">Create a new Filter</span>
+					<div data-bind="foreach: filters">
+						<div data-bind="template: { name: 'filter-template', data: $data }"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="pure-text-filter" style="background-color: #333; color: #f7f7f7; width: 100%; padding-left: 20px; height: 100%;">
+						<pre data-bind="text: RenderFilterFile"></pre>
+					</div>
+				</div>
+			</div>
+			<div class="four columns">
+				<h1>There should be an item preview in there.</h1>
+				<p>One day. maybe.</p>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug.js"></script>
+	<script type="text/html" id="filter-template">
+		<div class="filter-element">
+			<div class="filter-show-hide">
+				<select data-bind="value: Show">
+					<option value="show">Show</option>
+					<option value="hide">Hide</option>
+				</select>
+			</div>
+			<div class="filter-item-type">
+				<div data-bind="foreach: ItemTypes">
+					<div class="filter-additional">
+						<select data-bind="value: Type">
+							<option value="amulet">Amulets</option>
+							<option value="gems">Gems</option>
+							<option value="gavel">Gavel</option>
+						</select>
+					</div>
+				</div>
+				<span class="action-link" data-bind="click: AddItemType">Add another item type</span>
+			</div>
+			<div class="filter-additional-params">
+				<div data-bind="foreach: AdditionalFilters">
+					<div class="filter-additional">
+						<select data-bind="value: FilterType">
+							<option value="ilvl">Item Level</option>
+							<option value="rarity">Rarity</option>
+						</select>
+						<select data-bind="visible: NeedsComparator, value: FilterComparator">
+							<option value="l">Less than</option>
+							<option value="le">Less than or equal to</option>
+							<option value="e">Equal to</option>
+							<option value="ge">Greater than or equal to</option>
+							<option value="g">Greater than</option>
+						</select>
+						<select data-bind="visible: NeedsRarity, value: FilterRarity">
+							<option value="normal">Normal</option>
+							<option value="magic">Magic</option>
+							<option value="rare">Rare</option>
+							<option value="unique">Unique</option>
+						</select>
+						<input type="text" data-bind="visible: NeedsValue, value: FilterValue">
+					</div>
+				</div>
+				<span class="action-link" data-bind="click: AddFilter">Add another parameter</span>
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

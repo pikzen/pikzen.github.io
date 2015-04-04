@@ -1,0 +1,50 @@
+body, html {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 100%;
+}
+
+.action-link {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+	display: block;
+	vertical-align: bottom;
+}
+
+.filter-element {
+	vertical-align: top;
+	background-color: #fff;
+	margin: 10px;
+	box-shadow: 0 0 5px 1px #ccc;
+	padding: 10px;
+}
+
+.filter-show-hide, .filter-item-type, .filter-additional-params {
+	height: 100%;
+	display: inline-block;
+}
+
+.filter-element:nth-child(2n) {
+	background-color: #c7c7c7;
+}
+
+.filter-element select {
+	display: inline-block;
+}
+
+.filter-element div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.filter-element .filter-additional-params .filter-additional {
+	display: block;
+}
+.filter-element .filter-item-type .filter-additional {
+	display: block;
+}
