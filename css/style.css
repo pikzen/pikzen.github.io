@@ -11,6 +11,22 @@ textarea {
   color: #ccc;
 }
 
+p {
+  font-size: 18px;
+}
+
+.sidebar-link {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12pt;
+  color: white;
+  transition: color 0.3s linear;
+}
+
+.sidebar-link:hover {
+  color: #FF9D00;
+}
+
 .light-text {
   color: #f7f7f7;
 }
