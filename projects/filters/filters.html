@@ -1,0 +1,1180 @@
+<!doctype html>
+<html>
+<head>
+	<title>Path of Exile | Loot Filters</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<link rel="stylesheet" href="css/awesomplete.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header class="row">
+			<h1>Path of Exile // Item Filter Generator</h1>
+			<div class="menu-selector-bar">
+				<div class="menu-item">Edit the filter</div>
+				<div class="menu-item">Item Preview (not implemented)</div>
+			</div>
+		</header>
+		<div class="row">
+			<div class="twelve columns">
+				<div class="row respect-size" style="padding: 10px;">
+					<span class="action-link" data-bind="click: addNewFilter">Create a new Filter</span>
+					<div data-bind="foreach: filters">
+						<div data-bind="template: { name: 'filter-template', data: $data }"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="pure-text-filter" style="background-color: #333; color: #f7f7f7; width: 100%; padding-left: 20px; height: 100%; padding-top: 10px; padding-bottom: 10px;">
+						<pre data-bind="text: RenderFilterFile"></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug.js"></script>
+	<script type="text/html" id="filter-template">
+		<div class="filter-element">
+			<span class="action-link action-link-inline" data-bind="click: dropFilter">Delete this filter</span>
+			<span class="action-link action-link-inline" data-bind="click: moveToTop">Move this filter to top</span>
+			<input type="checkbox" data-bind="attr: { name: AttrName(), id: AttrName()}, checked: collapseFilter">
+			<label class="collapse-button" data-bind="attr: {for: AttrName()}" style="display: inline-block">Collapse this filter</label>
+			<div class="box-separator" data-bind="visible: collapseFilter() == false"></div>
+			<div class="collapse-holder" data-bind="visible: collapseFilter() == false">
+				<div class="filter-show-hide filter">
+					<select data-bind="value: Show">
+						<option value="show">Show</option>
+						<option value="hide">Hide</option>
+					</select>
+				</div>
+				<div class="filter-additional-params filter">
+					<div data-bind="foreach: AdditionalFilters">
+						<div class="filter-additional">
+							<select data-bind="value: FilterType">
+								<option value="ilvl">Item Level</option>
+								<option value="rarity">Rarity</option>
+								<option value="basetype">Base Type</option>
+								<option value="class">Class</option>
+								<option value="droplevel">Drop Level</option>
+								<option value="quality">Quality</option>
+								<option value="sockets">Sockets</option>
+								<option value="linked">Linked Sockets</option>
+								<option value="socketgroup">Socket Groups</option>
+								<option value="bordercolor">Border Color</option>
+								<option value="bgcolor">Background Color</option>
+								<option value="color">Text Color</option>
+								<option value="sound">Play Alert Sound n°</option>
+							</select>
+							<select data-bind="visible: NeedsComparator, value: FilterComparator">
+								<option value="l">Less than</option>
+								<option value="le">Less than or equal to</option>
+								<option value="e">Equal to</option>
+								<option value="ge">Greater than or equal to</option>
+								<option value="g">Greater than</option>
+							</select>
+							<select data-bind="visible: NeedsRarity, value: FilterRarity">
+								<option value="normal">Normal</option>
+								<option value="magic">Magic</option>
+								<option value="rare">Rare</option>
+								<option value="unique">Unique</option>
+							</select>
+							<div data-bind="visible: NeedsDisplayBox, style: { 'backgroundColor': FilterBGColor(), border: FilterBorderColor(), color: FilterTextColor() }" class="bgbox">Item Name</div>
+							<select data-bind="visible: NeedsClass, value: FilterClass">
+								<option value="weapons">Weapons</option>
+								<option value="chests">Chestpieces</option>
+								<option value="helms">Helmets</option>
+								<option value="shields">Shields</option>
+								<option value="boots">Boots</option>
+								<option value="gloves">Gloves</option>
+								<option value="rings">Rings</option>
+								<option value="belts">Belts</option>
+								<option value="amulets">Amulets</option>
+								<option value="gems">Gems</option>
+								<option value="currency">Currency</option>
+							</select>
+							<input class="awesomplete" data-bind="visible: NeedsBaseType, value: FilterBaseType, valueUpdate: 'afterkeydown'" list="bases-list" placeholder="Type an item base type">
+							<datalist id="bases-list">
+								<option>Anger</option>
+								<option>Animate Guardian</option>
+								<option>Animate Weapon</option>
+								<option>Arc</option>
+								<option>Arctic Armour</option>
+								<option>Arctic Breath</option>
+								<option>Assassin's Mark</option>
+								<option>Ball Lightning</option>
+								<option>Barrage</option>
+								<option>Bear Trap</option>
+								<option>Blink Arrow</option>
+								<option>Blood Rage</option>
+								<option>Bone Offering</option>
+								<option>Burning Arrow</option>
+								<option>Clarity</option>
+								<option>Cleave</option>
+								<option>Cold Snap</option>
+								<option>Conductivity</option>
+								<option>Conversion Trap</option>
+								<option>Convocation</option>
+								<option>Cyclone</option>
+								<option>Decoy Totem</option>
+								<option>Desecrate</option>
+								<option>Determination</option>
+								<option>Detonate Dead</option>
+								<option>Devouring Totem</option>
+								<option>Discharge</option>
+								<option>Discipline</option>
+								<option>Dominating Blow</option>
+								<option>Double Strike</option>
+								<option>Dual Strike</option>
+								<option>Elemental Hit</option>
+								<option>Elemental Weakness</option>
+								<option>Enduring Cry</option>
+								<option>Enfeeble</option>
+								<option>Ethereal Knives</option>
+								<option>Explosive Arrow</option>
+								<option>Fire Trap</option>
+								<option>Fireball</option>
+								<option>Firestorm</option>
+								<option>Flame Surge</option>
+								<option>Flame Totem</option>
+								<option>Flameblast</option>
+								<option>Flammability</option>
+								<option>Flesh Offering</option>
+								<option>Flicker Strike</option>
+								<option>Freeze Mine</option>
+								<option>Freezing Pulse</option>
+								<option>Frenzy</option>
+								<option>Frost Wall</option>
+								<option>Frostbite</option>
+								<option>Glacial Cascade</option>
+								<option>Glacial Hammer</option>
+								<option>Grace</option>
+								<option>Ground Slam</option>
+								<option>Haste</option>
+								<option>Hatred</option>
+								<option>Heavy Strike</option>
+								<option>Herald of Ash</option>
+								<option>Herald of Ice</option>
+								<option>Herald of Thunder</option>
+								<option>Ice Nova</option>
+								<option>Ice Shot</option>
+								<option>Ice Spear</option>
+								<option>Ignite</option>
+								<option>Immortal Call</option>
+								<option>Incinerate</option>
+								<option>Infernal Blow</option>
+								<option>Kinetic Blast</option>
+								<option>Leap Slam</option>
+								<option>Lightning Arrow</option>
+								<option>Lightning Strike</option>
+								<option>Lightning Tendrils</option>
+								<option>Lightning Trap</option>
+								<option>Lightning Warp</option>
+								<option>Mirror Arrow</option>
+								<option>Molten Shell</option>
+								<option>Molten Strike</option>
+								<option>Phase Run  troll</option>
+								<option>Poacher's Mark</option>
+								<option>Poison Arrow</option>
+								<option>Portal</option>
+								<option>Power Siphon</option>
+								<option>Projectile Weakness</option>
+								<option>Puncture</option>
+								<option>Punishment</option>
+								<option>Purity of Elements</option>
+								<option>Purity of Fire</option>
+								<option>Purity of Ice</option>
+								<option>Purity of Lightning</option>
+								<option>Rain of Arrows</option>
+								<option>Raise Spectre</option>
+								<option>Raise Zombie</option>
+								<option>Reave</option>
+								<option>Reckoning</option>
+								<option>Rejuvenation Totem</option>
+								<option>Righteous Fire</option>
+								<option>Riposte</option>
+								<option>Searing Bond</option>
+								<option>Shield Charge</option>
+								<option>Shock Nova</option>
+								<option>Shockwave Totem</option>
+								<option>Smoke Mine</option>
+								<option>Spark</option>
+								<option>Spectral Throw</option>
+								<option>Split Arrow</option>
+								<option>Static Strike</option>
+								<option>Storm Call</option>
+								<option>Summon Raging Spirit</option>
+								<option>Summon Skeletons</option>
+								<option>Sweep</option>
+								<option>Tempest Shield</option>
+								<option>Temporal Chains</option>
+								<option>Tornado Shot</option>
+								<option>Touch of God</option>
+								<option>Vaal Arc</option>
+								<option>Vaal Burning Arrow</option>
+								<option>Vaal Clarity</option>
+								<option>Vaal Cold Snap</option>
+								<option>Vaal Cyclone</option>
+								<option>Vaal Detonate Dead</option>
+								<option>Vaal Discipline</option>
+								<option>Vaal Double Strike</option>
+								<option>Vaal Fireball</option>
+								<option>Vaal Flameblast</option>
+								<option>Vaal Glacial Hammer</option>
+								<option>Vaal Grace</option>
+								<option>Vaal Ground Slam</option>
+								<option>Vaal Haste</option>
+								<option>Vaal Heavy Strike</option>
+								<option>Vaal Ice Nova</option>
+								<option>Vaal Immortal Call</option>
+								<option>Vaal Lightning Strike</option>
+								<option>Vaal Lightning Warp</option>
+								<option>Vaal Molten Shell</option>
+								<option>Vaal Power Siphon</option>
+								<option>Vaal Rain of Arrows</option>
+								<option>Vaal Reave</option>
+								<option>Vaal Righteous Fire</option>
+								<option>Vaal Spark</option>
+								<option>Vaal Spectral Throw</option>
+								<option>Vaal Storm Call</option>
+								<option>Vaal Summon Skeletons</option>
+								<option>Vaal Sweep</option>
+								<option>Vengeance</option>
+								<option>Viper Strike</option>
+								<option>Vitality</option>
+								<option>Vulnerability</option>
+								<option>Warlord's Mark</option>
+								<option>Whirling Blades</option>
+								<option>Wrath</option>
+								<option>Agate Amulet</option>
+								<option>Amber Amulet</option>
+								<option>Citrine Amulet</option>
+								<option>Coral Amulet</option>
+								<option>Gold Amulet</option>
+								<option>Jade Amulet</option>
+								<option>Jet Amulet</option>
+								<option>Lapis Amulet</option>
+								<option>Onyx Amulet</option>
+								<option>Paua Amulet</option>
+								<option>Turquoise Amulet</option>
+								<option>Chain Belt</option>
+								<option>Cloth Belt</option>
+								<option>Golden Obi</option>
+								<option>Heavy Belt</option>
+								<option>Leather Belt</option>
+								<option>Rustic Sash</option>
+								<option>Studded Belt</option>
+								<option>Arena Plate</option>
+								<option>Assassin's Garb</option>
+								<option>Astral Plate</option>
+								<option>Battle Lamellar</option>
+								<option>Battle Plate</option>
+								<option>Blood Raiment</option>
+								<option>Bone Armour</option>
+								<option>Bronze Plate</option>
+								<option>Buckskin Tunic</option>
+								<option>Cabalist Regalia</option>
+								<option>Carnal Armour</option>
+								<option>Chain Hauberk</option>
+								<option>Chainmail Doublet</option>
+								<option>Chainmail Tunic</option>
+								<option>Chainmail Vest</option>
+								<option>Chestplate</option>
+								<option>Colosseum Plate</option>
+								<option>Commander's Brigandine</option>
+								<option>Conjurer's Vestment</option>
+								<option>Conquest Chainmail</option>
+								<option>Copper Plate</option>
+								<option>Coronal Leather</option>
+								<option>Crimson Raiment</option>
+								<option>Crusader Chainmail</option>
+								<option>Crusader Plate</option>
+								<option>Crypt Armour</option>
+								<option>Cutthroat's Garb</option>
+								<option>Desert Brigandine</option>
+								<option>Destiny Leather</option>
+								<option>Destroyer Regalia</option>
+								<option>Devout Chainmail</option>
+								<option>Dragonscale Doublet</option>
+								<option>Eelskin Tunic</option>
+								<option>Elegant Ringmail</option>
+								<option>Exquisite Leather</option>
+								<option>Field Lamellar</option>
+								<option>Frontier Leather</option>
+								<option>Full Chainmail</option>
+								<option>Full Dragonscale</option>
+								<option>Full Leather</option>
+								<option>Full Plate</option>
+								<option>Full Ringmail</option>
+								<option>Full Scale Armour</option>
+								<option>Full Wyrmscale</option>
+								<option>General's Brigandine</option>
+								<option>Gladiator Plate</option>
+								<option>Glorious Leather</option>
+								<option>Glorious Plate</option>
+								<option>Golden Plate</option>
+								<option>Holy Chainmail</option>
+								<option>Hussar Brigandine</option>
+								<option>Infantry Brigandine</option>
+								<option>Kaom's Plate</option>
+								<option>Lacquered Garb</option>
+								<option>Latticed Ringmail</option>
+								<option>Light Brigandine</option>
+								<option>Lordly Plate</option>
+								<option>Loricated Ringmail</option>
+								<option>Mage's Vestment</option>
+								<option>Majestic Plate</option>
+								<option>Necromancer Silks</option>
+								<option>Occultist's Vestment</option>
+								<option>Oiled Coat</option>
+								<option>Oiled Vest</option>
+								<option>Ornate Ringmail</option>
+								<option>Padded Jacket</option>
+								<option>Padded Vest</option>
+								<option>Plate Vest</option>
+								<option>Quilted Jacket</option>
+								<option>Ringmail Coat</option>
+								<option>Sacrificial Garb</option>
+								<option>Sadist Garb</option>
+								<option>Sage's Robe</option>
+								<option>Saintly Chainmail</option>
+								<option>Saint's Hauberk</option>
+								<option>Savant's Robe</option>
+								<option>Scale Doublet</option>
+								<option>Scale Vest</option>
+								<option>Scarlet Raiment</option>
+								<option>Scholar's Robe</option>
+								<option>Sentinel Jacket</option>
+								<option>Shabby Jerkin</option>
+								<option>Sharkskin Tunic</option>
+								<option>Silk Robe</option>
+								<option>Silken Garb</option>
+								<option>Silken Vest</option>
+								<option>Silken Wrap</option>
+								<option>Simple Robe</option>
+								<option>Sleek Coat</option>
+								<option>Soldier's Brigandine</option>
+								<option>Spidersilk Robe</option>
+								<option>Strapped Leather</option>
+								<option>Sun Leather</option>
+								<option>Sun Plate</option>
+								<option>Thief's Garb</option>
+								<option>Triumphant Lamellar</option>
+								<option>Vaal Regalia</option>
+								<option>Varnished Coat</option>
+								<option>War Plate</option>
+								<option>Waxed Garb</option>
+								<option>Widowsilk Robe</option>
+								<option>Wild Leather</option>
+								<option>Wyrmscale Doublet</option>
+								<option>Zodiac Leather</option>
+								<option>Ambush Boots</option>
+								<option>Ancient Greaves</option>
+								<option>Antique Greaves</option>
+								<option>Arcanist Slippers</option>
+								<option>Assassin's Boots</option>
+								<option>Avian Slippers</option>
+								<option>Bronzescale Boots</option>
+								<option>Carnal Boots</option>
+								<option>Chain Boots</option>
+								<option>Clasped Boots</option>
+								<option>Conjurer Boots</option>
+								<option>Crusader Boots</option>
+								<option>Deerskin Boots</option>
+								<option>Dragonscale Boots</option>
+								<option>Eelskin Boots</option>
+								<option>Goathide Boots</option>
+								<option>Golden Caligae</option>
+								<option>Goliath Greaves</option>
+								<option>Hydrascale Boots</option>
+								<option>Iron Greaves</option>
+								<option>Ironscale Boots</option>
+								<option>Kaom's Greaves</option>
+								<option>Leatherscale Boots</option>
+								<option>Legion Boots</option>
+								<option>Mesh Boots</option>
+								<option>Murder Boots</option>
+								<option>Nubuck Boots</option>
+								<option>Plated Greaves</option>
+								<option>Rawhide Boots</option>
+								<option>Reinforced Greaves</option>
+								<option>Ringmail Boots</option>
+								<option>Riveted Boots</option>
+								<option>Samite Slippers</option>
+								<option>Satin Slippers</option>
+								<option>Scholar Boots</option>
+								<option>Serpentscale Boots</option>
+								<option>Shackled Boots</option>
+								<option>Shagreen Boots</option>
+								<option>Sharkskin Boots</option>
+								<option>Silk Slippers</option>
+								<option>Slink Boots</option>
+								<option>Soldier Boots</option>
+								<option>Sorcerer Boots</option>
+								<option>Stealth Boots</option>
+								<option>Steel Greaves</option>
+								<option>Steelscale Boots</option>
+								<option>Strapped Boots</option>
+								<option>Titan Greaves</option>
+								<option>Trapper Boots</option>
+								<option>Vaal Greaves</option>
+								<option>Velvet Slippers</option>
+								<option>Wool Shoes</option>
+								<option>Wrapped Boots</option>
+								<option>Wyrmscale Boots</option>
+								<option>Zealot Boots</option>
+								<option>Bone Bow</option>
+								<option>Citadel Bow</option>
+								<option>Composite Bow</option>
+								<option>Compound Bow</option>
+								<option>Crude Bow</option>
+								<option>Death Bow</option>
+								<option>Decimation Bow</option>
+								<option>Decurve Bow</option>
+								<option>Grove Bow</option>
+								<option>Harbinger Bow</option>
+								<option>Highborn Bow</option>
+								<option>Imperial Bow</option>
+								<option>Ivory Bow</option>
+								<option>Long Bow</option>
+								<option>Maraketh Bow</option>
+								<option>Ranger Bow</option>
+								<option>Recurve Bow</option>
+								<option>Royal Bow</option>
+								<option>Short Bow</option>
+								<option>Sniper Bow</option>
+								<option>Spine Bow</option>
+								<option>Thicket Bow</option>
+								<option>Awl</option>
+								<option>Blinder</option>
+								<option>Cat's Paw</option>
+								<option>Eagle Claw</option>
+								<option>Eye Gouger</option>
+								<option>Fright Claw</option>
+								<option>Gouger</option>
+								<option>Great White Claw</option>
+								<option>Gut Ripper</option>
+								<option>Hellion's Paw</option>
+								<option>Imperial Claw</option>
+								<option>Nailed Fist</option>
+								<option>Noble Claw</option>
+								<option>Prehistoric Claw</option>
+								<option>Sharktooth Claw</option>
+								<option>Sparkling Claw</option>
+								<option>Terror Claw</option>
+								<option>Thresher Claw</option>
+								<option>Throat Stabber</option>
+								<option>Tiger's Paw</option>
+								<option>Timeworn Claw</option>
+								<option>Vaal Claw</option>
+								<option>Diamond Flask</option>
+								<option>Ambusher</option>
+								<option>Boot Blade</option>
+								<option>Boot Knife</option>
+								<option>Butcher Knife</option>
+								<option>Carving Knife</option>
+								<option>Copper Kris</option>
+								<option>Demon Dagger</option>
+								<option>Ezomyte Dagger</option>
+								<option>Fiend Dagger</option>
+								<option>Flaying Knife</option>
+								<option>Glass Shank</option>
+								<option>Golden Kris</option>
+								<option>Gutting Knife</option>
+								<option>Imp Dagger</option>
+								<option>Imperial Skean</option>
+								<option>Platinum Kris</option>
+								<option>Poignard</option>
+								<option>Royal Skean</option>
+								<option>Skean</option>
+								<option>Skinning Knife</option>
+								<option>Slaughter Knife</option>
+								<option>Stiletto</option>
+								<option>Fishing Rod</option>
+								<option>Ambush Mitts</option>
+								<option>Ancient Gauntlets</option>
+								<option>Antique Gauntlets</option>
+								<option>Arcanist Gloves</option>
+								<option>Assassin's Mitts</option>
+								<option>Bronze Gauntlets</option>
+								<option>Bronzescale Gauntlets</option>
+								<option>Carnal Mitts</option>
+								<option>Chain Gloves</option>
+								<option>Clasped Mitts</option>
+								<option>Conjurer Gloves</option>
+								<option>Crusader Gloves</option>
+								<option>Deerskin Gloves</option>
+								<option>Dragonscale Gauntlets</option>
+								<option>Eelskin Gloves</option>
+								<option>Embroidered Gloves</option>
+								<option>Fishscale Gauntlets</option>
+								<option>Goathide Gloves</option>
+								<option>Golden Bracers</option>
+								<option>Goliath Gauntlets</option>
+								<option>Hydrascale Gauntlets</option>
+								<option>Iron Gauntlets</option>
+								<option>Ironscale Gauntlets</option>
+								<option>Legion Gloves</option>
+								<option>Mesh Gloves</option>
+								<option>Murder Mitts</option>
+								<option>Nubuck Gloves</option>
+								<option>Plated Gauntlets</option>
+								<option>Rawhide Gloves</option>
+								<option>Ringmail Gloves</option>
+								<option>Riveted Gloves</option>
+								<option>Samite Gloves</option>
+								<option>Satin Gloves</option>
+								<option>Serpentscale Gauntlets</option>
+								<option>Shagreen Gloves</option>
+								<option>Sharkskin Gloves</option>
+								<option>Silk Gloves</option>
+								<option>Slink Gloves</option>
+								<option>Soldier Gloves</option>
+								<option>Sorcerer Gloves</option>
+								<option>Stealth Gloves</option>
+								<option>Steel Gauntlets</option>
+								<option>Steelscale Gauntlets</option>
+								<option>Strapped Mitts</option>
+								<option>Titan Gauntlets</option>
+								<option>Trapper Mitts</option>
+								<option>Vaal Gauntlets</option>
+								<option>Velvet Gloves</option>
+								<option>Wool Gloves</option>
+								<option>Wrapped Mitts</option>
+								<option>Wyrmscale Gauntlets</option>
+								<option>Zealot Gloves</option>
+								<option>Aventail Helmet</option>
+								<option>Barbute Helmet</option>
+								<option>Battered Helm</option>
+								<option>Bone Circlet</option>
+								<option>Callous Mask</option>
+								<option>Close Helmet</option>
+								<option>Cone Helmet</option>
+								<option>Crusader Helmet</option>
+								<option>Deicide Mask</option>
+								<option>Eternal Burgonet</option>
+								<option>Ezomyte Burgonet</option>
+								<option>Fencer Helm</option>
+								<option>Festival Mask</option>
+								<option>Fluted Bascinet</option>
+								<option>Gilded Sallet</option>
+								<option>Gladiator Helmet</option>
+								<option>Golden Mask</option>
+								<option>Golden Wreath</option>
+								<option>Great Crown</option>
+								<option>Great Helmet</option>
+								<option>Harlequin Mask</option>
+								<option>Hubris Circlet</option>
+								<option>Hunter Hood</option>
+								<option>Iron Circlet</option>
+								<option>Iron Hat</option>
+								<option>Iron Mask</option>
+								<option>Lacquered Helmet</option>
+								<option>Leather Cap</option>
+								<option>Leather Hood</option>
+								<option>Lion Pelt</option>
+								<option>Lunaris Circlet</option>
+								<option>Magistrate Crown</option>
+								<option>Mind Cage</option>
+								<option>Necromancer Circlet</option>
+								<option>Nightmare Bascinet</option>
+								<option>Noble Tricorne</option>
+								<option>Pig-Faced Bascinet</option>
+								<option>Plague Mask</option>
+								<option>Praetor Crown</option>
+								<option>Prophet Crown</option>
+								<option>Raven Mask</option>
+								<option>Reaver Helmet</option>
+								<option>Regicide Mask</option>
+								<option>Royal Burgonet</option>
+								<option>Rusted Coif</option>
+								<option>Sallet</option>
+								<option>Samite Helmet</option>
+								<option>Scare Mask</option>
+								<option>Secutor Helm</option>
+								<option>Siege Helmet</option>
+								<option>Silken Hood</option>
+								<option>Sinner Tricorne</option>
+								<option>Solaris Circlet</option>
+								<option>Soldier Helmet</option>
+								<option>Steel Circlet</option>
+								<option>Torture Cage</option>
+								<option>Tribal Circlet</option>
+								<option>Tricorne</option>
+								<option>Ursine Pelt</option>
+								<option>Vaal Mask</option>
+								<option>Vine Circlet</option>
+								<option>Visored Sallet</option>
+								<option>Wolf Pelt</option>
+								<option>Zealot Helmet</option>
+								<option>Colossal Hybrid Flask</option>
+								<option>Hallowed Hybrid Flask</option>
+								<option>Large Hybrid Flask</option>
+								<option>Medium Hybrid Flask</option>
+								<option>Sacred Hybrid Flask</option>
+								<option>Small Hybrid Flask</option>
+								<option>Colossal Life Flask</option>
+								<option>Divine Life Flask</option>
+								<option>Eternal Life Flask</option>
+								<option>Giant Life Flask</option>
+								<option>Grand Life Flask</option>
+								<option>Greater Life Flask</option>
+								<option>Hallowed Life Flask</option>
+								<option>Large Life Flask</option>
+								<option>Medium Life Flask</option>
+								<option>Sacred Life Flask</option>
+								<option>Sanctified Life Flask</option>
+								<option>Small Life Flask</option>
+								<option>Colossal Mana Flask</option>
+								<option>Divine Mana Flask</option>
+								<option>Eternal Mana Flask</option>
+								<option>Giant Mana Flask</option>
+								<option>Grand Mana Flask</option>
+								<option>Greater Mana Flask</option>
+								<option>Hallowed Mana Flask</option>
+								<option>Large Mana Flask</option>
+								<option>Medium Mana Flask</option>
+								<option>Sacred Mana Flask</option>
+								<option>Sanctified Mana Flask</option>
+								<option>Small Mana Flask</option>
+								<option>Mortal Grief</option>
+								<option>Mortal Hope</option>
+								<option>Mortal Ignorance</option>
+								<option>Mortal Rage</option>
+								<option>Sacrifice at Dawn</option>
+								<option>Sacrifice at Dusk</option>
+								<option>Sacrifice at Midnight</option>
+								<option>Sacrifice at Noon</option>
+								<option>Academy Map</option>
+								<option>Arachnid Nest Map</option>
+								<option>Arcade Map</option>
+								<option>Arsenal Map</option>
+								<option>Bazaar Map</option>
+								<option>Bog Map</option>
+								<option>Canyon Map</option>
+								<option>Catacomb Map</option>
+								<option>Cells Map</option>
+								<option>Cemetery Map</option>
+								<option>Colonnade Map</option>
+								<option>Courtyard Map</option>
+								<option>Coves Map</option>
+								<option>Crematorium Map</option>
+								<option>Crypt Map</option>
+								<option>Dark Forest Map</option>
+								<option>Dried Lake Map</option>
+								<option>Dry Peninsula Map</option>
+								<option>Dry Woods Map</option>
+								<option>Dunes Map</option>
+								<option>Dungeon Map</option>
+								<option>Ghetto Map</option>
+								<option>Gorge Map</option>
+								<option>Graveyard Map</option>
+								<option>Grotto Map</option>
+								<option>Jungle Valley Map</option>
+								<option>Labyrinth Map</option>
+								<option>Maze Map</option>
+								<option>Mine Map</option>
+								<option>Mountain Ledge Map</option>
+								<option>Mud Geyser Map</option>
+								<option>Museum Map</option>
+								<option>Necropolis Map</option>
+								<option>Orchard Map</option>
+								<option>Overgrown Ruin Map</option>
+								<option>Overgrown Shrine Map</option>
+								<option>Palace Map</option>
+								<option>Pier Map</option>
+								<option>Plateau Map</option>
+								<option>Precinct Map</option>
+								<option>Promenade Map</option>
+								<option>Reef Map</option>
+								<option>Residence Map</option>
+								<option>Sewer Map</option>
+								<option>Shipyard Map</option>
+								<option>Shore Map</option>
+								<option>Shrine Map</option>
+								<option>Spider Forest Map</option>
+								<option>Spider Lair Map</option>
+								<option>Springs Map</option>
+								<option>Strand Map</option>
+								<option>Temple Map</option>
+								<option>Thicket Map</option>
+								<option>Torture Chamber Map</option>
+								<option>Tropical Island Map</option>
+								<option>Tunnel Map</option>
+								<option>Underground River Map</option>
+								<option>Underground Sea Map</option>
+								<option>Vaal Pyramid Map</option>
+								<option>Vaal Temple Map</option>
+								<option>Villa Map</option>
+								<option>Waste Pool Map</option>
+								<option>Wharf Map</option>
+								<option>Arming Axe</option>
+								<option>Boarding Axe</option>
+								<option>Broad Axe</option>
+								<option>Butcher Axe</option>
+								<option>Ceremonial Axe</option>
+								<option>Chest Splitter</option>
+								<option>Cleaver</option>
+								<option>Decorative Axe</option>
+								<option>Infernal Axe</option>
+								<option>Jade Hatchet</option>
+								<option>Jasper Axe</option>
+								<option>Karui Axe</option>
+								<option>Reaver Axe</option>
+								<option>Royal Axe</option>
+								<option>Rusted Hatchet</option>
+								<option>Siege Axe</option>
+								<option>Spectral Axe</option>
+								<option>Tomahawk</option>
+								<option>Vaal Hatchet</option>
+								<option>War Axe</option>
+								<option>Wraith Axe</option>
+								<option>Wrist Chopper</option>
+								<option>Ancestral Club</option>
+								<option>Auric Mace</option>
+								<option>Barbed Club</option>
+								<option>Battle Hammer</option>
+								<option>Bladed Mace</option>
+								<option>Ceremonial Mace</option>
+								<option>Dream Mace</option>
+								<option>Driftwood Club</option>
+								<option>Flanged Mace</option>
+								<option>Gavel</option>
+								<option>Legion Hammer</option>
+								<option>Nightmare Mace</option>
+								<option>Ornate Mace</option>
+								<option>Pernarch</option>
+								<option>Petrified Club</option>
+								<option>Phantom Mace</option>
+								<option>Rock Breaker</option>
+								<option>Spiked Club</option>
+								<option>Stone Hammer</option>
+								<option>Tenderizer</option>
+								<option>Tribal Club</option>
+								<option>War Hammer</option>
+								<option>Ancient Sword</option>
+								<option>Baselard</option>
+								<option>Battle Sword</option>
+								<option>Broad Sword</option>
+								<option>Copper Sword</option>
+								<option>Corsair Sword</option>
+								<option>Cutlass</option>
+								<option>Dusk Blade</option>
+								<option>Elder Sword</option>
+								<option>Elegant Sword</option>
+								<option>Eternal Sword</option>
+								<option>Gemstone Sword</option>
+								<option>Gladius</option>
+								<option>Graceful Sword</option>
+								<option>Legion Sword</option>
+								<option>Midnight Blade</option>
+								<option>Rusted Sword</option>
+								<option>Sabre</option>
+								<option>Twilight Blade</option>
+								<option>Vaal Blade</option>
+								<option>Variscite Blade</option>
+								<option>War Sword</option>
+								<option>Alira's Amulet</option>
+								<option>Allflame</option>
+								<option>Ammonite Glyph</option>
+								<option>Baleful Gem</option>
+								<option>Book of Reform</option>
+								<option>Book of Regrets</option>
+								<option>Book of Skill</option>
+								<option>Bust of Gaius Sentari</option>
+								<option>Bust of Hector Titucius</option>
+								<option>Bust of Marceus Lioneye</option>
+								<option>Chitus' Plum</option>
+								<option>Decanter Spiritus</option>
+								<option>Golden Hand</option>
+								<option>Golden Page</option>
+								<option>Haliotis Glyph</option>
+								<option>Infernal Talc</option>
+								<option>Kraityn's Amulet</option>
+								<option>Maligaro's Spike</option>
+								<option>Medicine Chest</option>
+								<option>Oak's Amulet</option>
+								<option>Ribbon Spool</option>
+								<option>Roseus Glyph</option>
+								<option>Sewer Keys</option>
+								<option>Thaumetic Emblem</option>
+								<option>Thaumetic Sulphite</option>
+								<option>The Apex</option>
+								<option>Tolman's Bracelet</option>
+								<option>Tower Key</option>
+								<option>Blunt Arrow Quiver</option>
+								<option>Broadhead Arrow Quiver</option>
+								<option>Conductive Quiver</option>
+								<option>Cured Quiver</option>
+								<option>Fire Arrow Quiver</option>
+								<option>Heavy Quiver</option>
+								<option>Light Quiver</option>
+								<option>Penetrating Arrow Quiver</option>
+								<option>Rugged Quiver</option>
+								<option>Serrated Arrow Quiver</option>
+								<option>Sharktooth Arrow Quiver</option>
+								<option>Spike-Point Arrow Quiver</option>
+								<option>Two-Point Arrow Quiver</option>
+								<option>Amethyst Ring</option>
+								<option>Coral Ring</option>
+								<option>Diamond Ring</option>
+								<option>Gold Ring</option>
+								<option>Golden Hoop</option>
+								<option>Iron Ring</option>
+								<option>Moonstone Ring</option>
+								<option>Paua Ring</option>
+								<option>Prismatic Ring</option>
+								<option>Ruby Ring</option>
+								<option>Sapphire Ring</option>
+								<option>Topaz Ring</option>
+								<option>Two-Stone Ring</option>
+								<option>Unset Ring</option>
+								<option>Abyssal Sceptre</option>
+								<option>Blood Sceptre</option>
+								<option>Bronze Sceptre</option>
+								<option>Carnal Sceptre</option>
+								<option>Crystal Sceptre</option>
+								<option>Darkwood Sceptre</option>
+								<option>Driftwood Sceptre</option>
+								<option>Grinning Fetish</option>
+								<option>Iron Sceptre</option>
+								<option>Karui Sceptre</option>
+								<option>Lead Sceptre</option>
+								<option>Ochre Sceptre</option>
+								<option>Opal Sceptre</option>
+								<option>Platinum Sceptre</option>
+								<option>Quartz Sceptre</option>
+								<option>Ritual Sceptre</option>
+								<option>Royal Sceptre</option>
+								<option>Sekhem</option>
+								<option>Shadow Sceptre</option>
+								<option>Tyrant's Sekhem</option>
+								<option>Vaal Sceptre</option>
+								<option>Void Sceptre</option>
+								<option>Alder Spike Shield</option>
+								<option>Alloyed Spike Shield</option>
+								<option>Ancient Spirit Shield</option>
+								<option>Angelic Kite Shield</option>
+								<option>Archon Kite Shield</option>
+								<option>Baroque Round Shield</option>
+								<option>Battle Buckler</option>
+								<option>Bone Spirit Shield</option>
+								<option>Branded Kite Shield</option>
+								<option>Brass Spirit Shield</option>
+								<option>Bronze Tower Shield</option>
+								<option>Buckskin Tower Shield</option>
+								<option>Burnished Spike Shield</option>
+								<option>Cardinal Round Shield</option>
+								<option>Cedar Tower Shield</option>
+								<option>Ceremonial Kite Shield</option>
+								<option>Champion Kite Shield</option>
+								<option>Chiming Spirit Shield</option>
+								<option>Colossal Tower Shield</option>
+								<option>Compound Spiked Shield</option>
+								<option>Copper Tower Shield</option>
+								<option>Corroded Tower Shield</option>
+								<option>Corrugated Buckler</option>
+								<option>Crested Tower Shield</option>
+								<option>Crimson Round Shield</option>
+								<option>Crusader Buckler</option>
+								<option>Driftwood Spiked Shield</option>
+								<option>Ebony Tower Shield</option>
+								<option>Elegant Round Shield</option>
+								<option>Enameled Buckler</option>
+								<option>Etched Kite Shield</option>
+								<option>Ezomyte Spiked Shield</option>
+								<option>Ezomyte Tower Shield</option>
+								<option>Fir Round Shield</option>
+								<option>Fossilized Spirit Shield</option>
+								<option>Gilded Buckler</option>
+								<option>Girded Tower Shield</option>
+								<option>Goathide Buckler</option>
+								<option>Golden Buckler</option>
+								<option>Hammered Buckler</option>
+								<option>Harmonic Spirit Shield</option>
+								<option>Imperial Buckler</option>
+								<option>Ironwood Buckler</option>
+								<option>Ivory Spirit Shield</option>
+								<option>Jingling Spirit Shield</option>
+								<option>Lacewood Spirit Shield</option>
+								<option>Lacquered Buckler</option>
+								<option>Laminated Kite Shield</option>
+								<option>Layered Kite Shield</option>
+								<option>Linden Kite Shield</option>
+								<option>Mahogany Tower Shield</option>
+								<option>Maple Round Shield</option>
+								<option>Mirrored Spiked Shield</option>
+								<option>Mosaic Kite Shield</option>
+								<option>Oak Buckler</option>
+								<option>Ornate Spiked Shield</option>
+								<option>Painted Buckler</option>
+								<option>Painted Tower Shield</option>
+								<option>Pine Buckler</option>
+								<option>Pinnacle Tower Shield</option>
+								<option>Plank Kite Shield</option>
+								<option>Polished Spiked Shield</option>
+								<option>Rawhide Tower Shield</option>
+								<option>Redwood Spiked Shield</option>
+								<option>Reinforced Kite Shield</option>
+								<option>Reinforced Tower Shield</option>
+								<option>Rotted Round Shield</option>
+								<option>Scarlet Round Shield</option>
+								<option>Shagreen Tower Shield</option>
+								<option>Sovereign Spiked Shield</option>
+								<option>Spiked Bundle</option>
+								<option>Spiked Round Shield</option>
+								<option>Spiny Round Shield</option>
+								<option>Splendid Round Shield</option>
+								<option>Splintered Tower Shield</option>
+								<option>Steel Kite Shield</option>
+								<option>Studded Round Shield</option>
+								<option>Supreme Spiked Shield</option>
+								<option>Tarnished Spirit Shield</option>
+								<option>Teak Round Shield</option>
+								<option>Thorium Spirit Shield</option>
+								<option>Titanium Spirit Shield</option>
+								<option>Twig Spirit Shield</option>
+								<option>Vaal Buckler</option>
+								<option>Vaal Spirit Shield</option>
+								<option>Walnut Spirit Shield</option>
+								<option>War Buckler</option>
+								<option>Yew Spirit Shield</option>
+								<option>Albino Rhoa Feather</option>
+								<option>Alchemy Shard</option>
+								<option>Alteration Shard</option>
+								<option>Armourer's Scrap</option>
+								<option>Blacksmith's Whetstone</option>
+								<option>Blessed Orb</option>
+								<option>Cartographer's Chisel</option>
+								<option>Chaos Orb</option>
+								<option>Chromatic Orb</option>
+								<option>Divine Orb</option>
+								<option>Eternal Orb</option>
+								<option>Exalted Orb</option>
+								<option>Gemcutter's Prism</option>
+								<option>Glassblower's Bauble</option>
+								<option>Imprint</option>
+								<option>Jeweller's Orb</option>
+								<option>Mirror of Kalandra</option>
+								<option>Orb of Alchemy</option>
+								<option>Orb of Alteration</option>
+								<option>Orb of Augmentation</option>
+								<option>Orb of Chance</option>
+								<option>Orb of Fusing</option>
+								<option>Orb of Regret</option>
+								<option>Orb of Scouring</option>
+								<option>Orb of Transmutation</option>
+								<option>Portal Scroll</option>
+								<option>Regal Orb</option>
+								<option>Scroll Fragment</option>
+								<option>Scroll of Wisdom</option>
+								<option>Transmutation Shard</option>
+								<option>Vaal Orb</option>
+								<option>Coiled Staff</option>
+								<option>Ezomyte Staff</option>
+								<option>Foul Staff</option>
+								<option>Gnarled Branch</option>
+								<option>Highborn Staff</option>
+								<option>Imperial Staff</option>
+								<option>Iron Staff</option>
+								<option>Judgement Staff</option>
+								<option>Lathi</option>
+								<option>Long Staff</option>
+								<option>Maelström Staff</option>
+								<option>Military Staff</option>
+								<option>Primitive Staff</option>
+								<option>Primordial Staff</option>
+								<option>Quarterstaff</option>
+								<option>Royal Staff</option>
+								<option>Serpentine Staff</option>
+								<option>Vile Staff</option>
+								<option>Woodful Staff</option>
+								<option>Added Chaos Damage</option>
+								<option>Added Cold Damage</option>
+								<option>Added Fire Damage</option>
+								<option>Added Lightning Damage</option>
+								<option>Additional Accuracy</option>
+								<option>Blind</option>
+								<option>Block Chance Reduction</option>
+								<option>Blood Magic</option>
+								<option>Cast On Critical Strike</option>
+								<option>Cast on Death</option>
+								<option>Cast on Melee Kill</option>
+								<option>Cast when Damage Taken</option>
+								<option>Cast when Stunned</option>
+								<option>Chain</option>
+								<option>Chance to Flee</option>
+								<option>Chance to Ignite</option>
+								<option>Cold Penetration</option>
+								<option>Cold to Fire</option>
+								<option>Concentrated Effect</option>
+								<option>Culling Strike</option>
+								<option>Curse On Hit</option>
+								<option>Elemental Proliferation</option>
+								<option>Empower</option>
+								<option>Endurance Charge on Melee Stun</option>
+								<option>Enhance</option>
+								<option>Enlighten</option>
+								<option>Faster Attacks</option>
+								<option>Faster Casting</option>
+								<option>Faster Projectiles</option>
+								<option>Fire Penetration</option>
+								<option>Fork</option>
+								<option>Generosity</option>
+								<option>Greater Multiple Projectiles</option>
+								<option>Increased Area of Effect</option>
+								<option>Increased Burning Damage</option>
+								<option>Increased Critical Damage</option>
+								<option>Increased Critical Strikes</option>
+								<option>Increased Duration</option>
+								<option>Iron Grip</option>
+								<option>Iron Will</option>
+								<option>Item Quantity</option>
+								<option>Item Rarity</option>
+								<option>Knockback</option>
+								<option>Lesser Multiple Projectiles</option>
+								<option>Life Gain on Hit</option>
+								<option>Life Leech</option>
+								<option>Lightning Penetration</option>
+								<option>Mana Leech</option>
+								<option>Melee Damage on Full Life</option>
+								<option>Melee Physical Damage</option>
+								<option>Melee Splash</option>
+								<option>Minion and Totem Elemental Resistance</option>
+								<option>Minion Damage</option>
+								<option>Minion Life</option>
+								<option>Minion Speed</option>
+								<option>Multiple Traps</option>
+								<option>Multistrike</option>
+								<option>Physical Projectile Attack Damage</option>
+								<option>Physical to Lightning</option>
+								<option>Pierce</option>
+								<option>Point Blank</option>
+								<option>Power Charge On Critical</option>
+								<option>Ranged Attack Totem</option>
+								<option>Reduced Duration</option>
+								<option>Reduced Mana</option>
+								<option>Remote Mine</option>
+								<option>Slower Projectiles</option>
+								<option>Spell Echo</option>
+								<option>Spell Totem</option>
+								<option>Stun</option>
+								<option>Trap</option>
+								<option>Weapon Elemental Damage</option>
+								<option>Antique Rapier</option>
+								<option>Apex Rapier</option>
+								<option>Basket Rapier</option>
+								<option>Battered Foil</option>
+								<option>Burnished Foil</option>
+								<option>Dragonbone Rapier</option>
+								<option>Elegant Foil</option>
+								<option>Estoc</option>
+								<option>Fancy Foil</option>
+								<option>Harpy Rapier</option>
+								<option>Jagged Foil</option>
+								<option>Jewelled Foil</option>
+								<option>Pecoraro</option>
+								<option>Primeval Rapier</option>
+								<option>Rusted Spike</option>
+								<option>Serrated Foil</option>
+								<option>Spiraled Foil</option>
+								<option>Tempered Foil</option>
+								<option>Thorn Rapier</option>
+								<option>Vaal Rapier</option>
+								<option>Whalebone Rapier</option>
+								<option>Wyrmbone Rapier</option>
+								<option>Abyssal Axe</option>
+								<option>Despot Axe</option>
+								<option>Double Axe</option>
+								<option>Ezomyte Axe</option>
+								<option>Gilded Axe</option>
+								<option>Headsman Axe</option>
+								<option>Jade Chopper</option>
+								<option>Jasper Chopper</option>
+								<option>Karui Chopper</option>
+								<option>Labrys</option>
+								<option>Noble Axe</option>
+								<option>Poleaxe</option>
+								<option>Shadow Axe</option>
+								<option>Stone Axe</option>
+								<option>Sundering Axe</option>
+								<option>Timber Axe</option>
+								<option>Vaal Axe</option>
+								<option>Void Axe</option>
+								<option>Woodsplitter</option>
+								<option>Brass Maul</option>
+								<option>Colossus Mallet</option>
+								<option>Dread Maul</option>
+								<option>Driftwood Maul</option>
+								<option>Fright Maul</option>
+								<option>Great Mallet</option>
+								<option>Imperial Maul</option>
+								<option>Karui Maul</option>
+								<option>Mallet</option>
+								<option>Meatgrinder</option>
+								<option>Piledriver</option>
+								<option>Plated Maul</option>
+								<option>Sledgehammer</option>
+								<option>Spiked Maul</option>
+								<option>Spiny Maul</option>
+								<option>Steelhead</option>
+								<option>Terror Maul</option>
+								<option>Totemic Maul</option>
+								<option>Tribal Maul</option>
+								<option>Bastard Sword</option>
+								<option>Butcher Sword</option>
+								<option>Corroded Blade</option>
+								<option>Engraved Greatsword</option>
+								<option>Etched Greatsword</option>
+								<option>Ezomyte Blade</option>
+								<option>Footman Sword</option>
+								<option>Headman's Sword</option>
+								<option>Highland Blade</option>
+								<option>Infernal Sword</option>
+								<option>Keyblade   troll</option>
+								<option>Lion Sword</option>
+								<option>Longsword</option>
+								<option>Ornate Sword</option>
+								<option>Reaver Sword</option>
+								<option>Spectral Sword</option>
+								<option>Tiger Sword</option>
+								<option>Two-Handed Sword</option>
+								<option>Vaal Greatsword</option>
+								<option>Wraith Sword</option>
+								<option>Amethyst Flask</option>
+								<option>Granite Flask</option>
+								<option>Jade Flask</option>
+								<option>Quartz Flask</option>
+								<option>Quicksilver Flask</option>
+								<option>Ruby Flask</option>
+								<option>Sapphire Flask</option>
+								<option>Topaz Flask</option>
+								<option>Carved Wand</option>
+								<option>Crystal Wand</option>
+								<option>Demon's Horn</option>
+								<option>Driftwood Wand</option>
+								<option>Engraved Wand</option>
+								<option>Faun's Horn</option>
+								<option>Goat's Horn</option>
+								<option>Imbued Wand</option>
+								<option>Omen Wand</option>
+								<option>Opal Wand</option>
+								<option>Prophecy Wand</option>
+								<option>Quartz Wand</option>
+								<option>Sage Wand</option>
+								<option>Serpent Wand</option>
+								<option>Spiraled Wand</option>
+								<option>Tornado Wand</option>
+							</datalist>
+							<input type="text" data-bind="visible: NeedsValue, value: FilterValue, valueUpdate: 'afterkeydown'" placeholder="Value...">
+							<span class="delete action-link action-link-inline" data-bind="click: $parent.DeleteFilter">Delete</span>
+						</div>
+					</div>
+					<span class="action-link" data-bind="click: AddFilter">Add another parameter</span>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/awesomplete.min.js"></script>
+</body>
+</html>
