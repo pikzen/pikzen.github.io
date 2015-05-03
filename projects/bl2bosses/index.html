@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Borderlands 2 Boss Generator</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		
+		<header><div id="controls" class="next">
+			<h2>Borderlands 2</h2>
+		</div></header>
+		<div id="boss-info">
+			<h1>Click the button to get a new boss to destroy !</h1>
+			<div class="next" id="initial-button">Get me a boss !</div>
+		</div>
+
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/templ.js"></script>
+	<script src="js/data.js"></script>
+	<script>
+
+		var currentBoss;
+
+		$(document).ready(function() {
+			checkHash();
+		});
+
+        
+		$(".next").click(function() {
+                var bossNum = getRandomInt(0, data.length - 1);
+                while (bossNum == currentBoss) {
+                    bossNum = getRandomInt(0, data.length - 1);
+			    }
+                setData(bossNum);
+                setPhrase();
+		});
+        
+        $(window).on('hashchange', function() {
+            checkHash();
+        });
+        function checkHash() {
+            var hash = window.location.hash.substring(1);
+
+			if (hash.length > 0)
+			{
+				for (var i = 0; i < data.length; i++) 
+				{
+					if (data[i].name.toLowerCase().replace(/\s/g, '') == hash.toLowerCase())
+					{
+						setData(i);
+						setPhrase();
+						return true;
+					}
+				}		
+
+			}
+        }
+	
+		function setData(bossNum) {
+
+			currentBoss = bossNum;
+
+			$("#boss-info").html(function() {
+				var out = "<div id='boss-image-holder' style='background-image: url(\"img/" + data[bossNum].biome + ".png\")'>" + 
+						  	"<img src='" + data[bossNum].image + "'/>" + 
+						  "</div>" +
+						  "<h3>" + data[bossNum].name + "</h3>" + 
+						  "<h4>" + data[bossNum].title + "</h4>" + 
+						  "<h6>" + data[bossNum].location + "</h6>" + 
+						  "<div id='boss-loot'>";
+				for (var i = 0; i < data[bossNum].drops.length; i++) {
+					out += "<div class='weapon'>" + 
+								"<h5 class='" + data[bossNum].drops[i].class + "'>" + data[bossNum].drops[i].weapon + " <a href='" + data[bossNum].drops[i].wiki + "'>(Wiki)</a></h5>" + 
+								"<p><span class='special'>" + data[bossNum].drops[i].special + "</span> - " + data[bossNum].drops[i].description + "</p>" + 
+							"</div>";
+				}
+				out += "</div></div>";
+
+				return out;
+			});
+		}
+
+		function setPhrase() {
+			var phraseNum = getRandomInt(0, phrases.length);
+			$(".next").text(phrases[phraseNum]);
+		}
+
+		function getRandomInt (min, max) {
+    		return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	</script>
+</html>

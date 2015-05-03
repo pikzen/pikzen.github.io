@@ -1,0 +1,220 @@
+
+@font-face {
+  font-family: 'Compacta Bold Bt';
+  src: url('../fonts/CompactaBoldBT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.special {
+	font-weight: bold;
+	color: red;
+}
+
+header h2 {
+	font-family: "Compacta Bold Bt";
+	font-size: 60pt;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: yellow;
+	text-shadow: 1px 0 1px black,
+				 2px 0 1px black,
+				 3px 0 1px black,
+				 4px 0 1px black,
+				 5px 0 1px black,
+				 6px 0 1px black,
+				 7px 0 1px black,
+				 8px 0 1px black,
+				 9px 0 1px black,
+				 10px 0 1px black;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+header {
+	background-image: url("../img/hbg.png");
+	box-shadow: 0 5px 10px #000;
+	z-index: 1;
+	position: relative;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #ddd;
+}
+
+#boss-image-holder {
+	width: 100%;
+	height: 400px;
+	z-index: 50;
+	position: relative;
+	box-shadow: 0 5px 10px #000;
+}
+
+#boss-image-holder img {
+	max-height: 300px;
+	padding-top: 100px;
+	vertical-align: bottom;
+}
+
+#boss-info {
+	position: relative;
+	z-index: 0;
+	text-align: center;
+	width: 100%;
+	font-family: "Roboto";
+}
+
+#boss-info h3 {
+	font-size: 30pt;
+	font-family: "Roboto";
+	font-weight: 300;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#boss-info h4 {
+	font-size: 18pt;
+	font-family: "Roboto";
+	font-weight: lighter;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#boss-info h6 {
+    font-weight:300;
+}
+
+#boss-loot {
+	background-color: #ddd;
+	text-align: left;
+	padding: 2px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.legendary {
+	color: #d89c17;
+}
+
+.blue {
+    color: #3873af;
+}
+
+.purple {
+    color: #83479f;
+}
+
+.etech {
+	color: #b00c85;
+}
+
+h5 {
+	padding: 3px;
+	margin: 0;
+		font-size: 24pt;
+	font-family: "Compacta Bold BT";
+		text-shadow: 1px 0 1px black,
+				 2px 0 1px black,
+				 3px 0 1px black,
+				 4px 0 1px black,
+				 5px 0 1px black,
+				 0 1px 1px black,
+				 0 2px 1px black;
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+h5 a {
+	font-family: "Roboto";
+	font-size: 12pt;
+	text-shadow: none;
+	letter-spacing: 1px;
+	color: #888;
+	text-decoration: none;
+}
+
+#controls {
+	font-family: "Compacta Bold BT";
+	text-align: center;
+	font-size: 40pt;
+	color: #ffba00;
+	text-shadow: 1px 0 1px black,
+				 2px 0 1px black,
+				 3px 0 1px black,
+				 4px 0 1px black,
+				 5px 0 1px black,
+				 6px 0 1px black,
+				 7px 0 1px black,
+				 8px 0 1px black,
+				 9px 0 1px black,
+				 10px 0 1px black;
+	font-weight: 500;
+	letter-spacing: 0;
+	cursor: pointer;
+}
+
+header #controls:hover {
+	color: #ff7700;
+}
+
+#initial-button {
+	height: 100px;
+	width: 50%;
+	line-height: 100px;
+	color: #570000;
+	font-size: 30pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0 2px 3px #870000;
+	background: linear-gradient(to top, #cb0000, #570000);
+	margin: 0 auto;
+	box-shadow: 1px 1px 1px #570000,
+				2px 2px 1px #570000,
+				3px 3px 1px #570000,
+				4px 4px 1px #570000,
+				5px 5px 1px #570000,
+				6px 6px 1px #570000;
+
+	border-radius: 5px;
+	cursor: pointer;
+
+}
+
+#initial-button:active {
+		box-shadow: 1px 1px 1px #570000,
+				2px 2px 1px #570000,
+				3px 3px 1px #570000,
+				4px 4px 1px #570000;
+}
+
+.bxslider {
+	text-align: center;
+}
+
+.bxslider li img {
+	margin: 0 auto;
+}
+
+.bxslider li h1 {
+	color: lightgray;
+	font-size: 32pt;
+		text-shadow: 1px 0 1px black,
+				 2px 0 1px black,
+				 3px 0 1px black,
+				 4px 0 1px black,
+				 5px 0 1px black,
+				 6px 0 1px black,
+				 7px 0 1px black,
+				 8px 0 1px black,
+				 9px 0 1px black,
+				 10px 0 1px black;
+	font-family: "Compacta Bold BT";
+}
+
+.bxslider li h1.success {
+	color: #ffba00;
+}
