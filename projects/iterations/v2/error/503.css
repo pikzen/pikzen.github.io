@@ -1,0 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	text-align: center;
+}
+
+.error {
+	padding-top: 50px;
+	font-family: BebasRegular;
+	font-size: 24px;
+	letter-spacing: 1px;
+	line-height: 40px;
+	font-weight: 100;
+
+	b {
+		font-size: 40px;
+	}
+}

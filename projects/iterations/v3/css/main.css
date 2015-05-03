@@ -1,0 +1,252 @@
+/********************************\
+*           $HTML                *
+\********************************/
+header {
+	position: relative;
+	background-image: url("../img/linenbg.jpg");
+	color: white;
+	height: 62px;
+	box-shadow: 0px 4px 20px #000;
+	z-index: 0;
+}
+#copyright {
+	background-image: url("../img/linenbg.jpg");
+	color: #888;
+	font-size: 6pt;
+	text-transform: uppercase;
+	height: 30px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#copyright p {
+	line-height: 24pt;
+	margin: 0;
+}
+
+body {
+	background-color: #b5ced7;
+}
+
+a {
+		-webkit-transition: color linear 0.2s;
+			transition: color linear 0.2s;
+}
+/********************************\
+*           $NAVIGATION          *
+\********************************/
+#logo {
+	float: left;
+	display: inline;
+	width: auto;
+	height: 62px;
+	padding: 5px 0;
+}
+#nav-buttons-col {
+	width: auto;
+	float: right;
+}
+
+#nav-buttons {
+	width: 300px;
+}
+
+#nav-buttons ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+#nav-buttons ul li {
+	font-family: "ProximaNovaSemibold",sans-serif;
+	background-image: url("../img/buttonbg.png");
+	background-repeat: no-repeat;
+	float: left;
+	color: #aaa;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 90px;
+	margin: 0 0 0 4px;
+	-webkit-transition: box-shadow linear 0.2s;
+			transition: box-shadow linar 0.2s;
+}
+#nav-buttons ul li:hover {
+	box-shadow: inset 0px 0px 5px 4px #111;
+}
+#nav-buttons ul li#nav-top-1 {
+	background-position: 0 56px;
+}
+#nav-buttons ul li#nav-top-2 {
+	background-position: -130px 56px;
+}
+#nav-buttons ul li#nav-top-3 {
+	background-position: -260px 56px;
+}
+
+#nav-buttons ul li a {
+	color: #eee;
+	display: block;
+	padding: 22px 0;
+	margin-bottom: 1px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	opacity: 0.7;
+}
+
+.home-link {
+	color: #ccc;
+	font-family: "League Gothic";
+	font-size: 18pt;
+	line-height: 38pt;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	margin: 0 40px;
+
+	-webkit-transition: color linear 0.2s;
+		    transition: color linear 0.2s;
+}
+ .home-link:hover {
+ 	color: #fff;
+}
+
+/********************************\
+*           $MAIN CONTENT        *
+\********************************/
+.main {
+	height: 1000px;
+	background-color: #eee;
+}
+
+#content-image-presenter {
+	background-image: url("../img/background.jpg");
+	height: 320px;
+	background-position: center;
+}
+#content-image-presenter h2{
+	margin: 50px;
+	color: #ddd;
+	text-shadow: 3px 3px #222;
+}
+#content-image-presenter p {
+	margin-left: 50px;
+	color: #ddd;
+	font-weight: bold;
+}
+
+#content-info {
+	height: 600px;
+	background-color: #ddd;
+}
+#content-info h3 {
+	margin-top: 20px;
+	text-align: center;
+	text-decoration: italic;
+}
+
+.separator {
+	height: 15px;
+	position: relative;
+	background-color: black;
+	box-shadow: 0 5px 5px #444;
+	z-index: 0;
+}
+
+#projects-content {
+	background-image: url("../img/linenbg.jpg");
+}
+
+#projects-links {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#projects-links ul {
+	list-style-type: none;
+	color: #ddd;
+	text-transform: uppercase;
+	font-size: 8pt;
+	line-height: 38pt;
+	height: 30px;
+}
+#projects-links ul li {
+	float: left;
+	margin: 0 30px;
+}
+
+#projects-links ul li a:hover {
+	color: #195a6e;
+}
+
+.projects {
+	padding-left: 30px;
+	padding-top: 50px;
+	color: #ddd;
+}
+
+.projects h2 {
+	text-transform: uppercase;
+	text-shadow: 2px 2px #000;
+}
+.projects h3 {
+	text-transform: uppercase;
+	text-shadow: 2px 2px #111;
+	font-weight: light;
+	font-size: 16pt;
+}
+
+
+.projects .project {
+	margin-bottom: 15px;
+	padding-left: 10px;
+	margin-left: 30px;
+}
+
+.projects.dash {
+	border-bottom: 1px solid #333;
+}
+#projects-windows h2 {
+	color: #0098c7;
+}
+
+#projects-windows h3 {
+	color: #0098c7;
+}
+#projects-android h2 {
+	color: #f68d34;
+}
+#projects-android h3 {
+	color: #f68d34;
+}
+#projects-android .tiny.button {
+	background-color: #f68d34;
+	border: 1px solid #f68d34;
+	border-top: 2px solid #c6742f;
+}
+
+#projects-android .tiny.button:hover {
+	background-color: #c6742f;
+}
+#projects-windows .project-description {
+	border-left: 1px solid #0098c7;
+}
+#projects-android .project-description {
+	border-left: 1px solid #f68d34;
+}
+
+.project-description {
+	width: 50%;
+	padding-left: 20px;
+	margin-right: 20px;
+}
+.project-image {
+	max-width: 300px;
+	margin-right: 30px;
+}
+
+
+.fright {
+	float: right;
+}
+
+.fleft {
+	float: left;
+}

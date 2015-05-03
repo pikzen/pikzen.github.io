@@ -1,0 +1,137 @@
+.box:hover {
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5) rotate(0.01deg);
+  cursor: pointer;
+}
+.box:hover .elemname {
+  visibility: visible;
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=1);
+}
+h2 {
+  color: #2c2c2c;
+}
+.box {
+  -moz-transform-origin: 100% 100%;
+  -moz-transition: -moz-box-shadow 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -webkit-transform-origin: 100% 100%;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -webkit-box-shadow: 0px 0px 1px #434343, 1px 1px 1px #414141, 2px 2px 1px #3e3e3e, 3px 3px 1px #3c3c3c, 4px 4px 1px #393939, 5px 5px 1px #373737;
+  -moz-box-shadow: #434343 0px 0px 1px, #414141 1px 1px 1px, #3e3e3e 2px 2px 1px, #3c3c3c 3px 3px 1px, #393939 4px 4px 1px, #373737 5px 5px 1px;
+  background-color: #5f5f5f;
+  color: #3a3a3a;
+  font-size: 24px;
+  font-weight: bold;
+  height: 65px;
+  horizontal-align: center;
+  line-height: 0.7em;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0px -1px 0px #363636;
+  vertical-align: middle;
+  width: 65px;
+}
+.box .elemnum {
+  font-size: 12px;
+  color: #3a3a3a;
+  text-shadow: none;
+  line-height: 2em;
+  font-weight: lighter;
+}
+.box .elemname {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 9px;
+  line-height: 0.1em;
+  color: #3a3a3a;
+  text-shadow: none;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  font-weight: lighter;
+}
+.box .invisible {
+  margin: auto;
+  line-height: 6em;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.box .invisible:hover {
+  -webkit-transform: none;
+  cursor: default;
+}
+.box.categ {
+  font-size: 10px;
+  color: #545454;
+  text-shadow: none;
+  vertical-align: middle;
+  line-height: 6em;
+}
+.box.alcalins {
+  background-color: #b9f73e;
+  -webkit-box-shadow: 0px 0px 1px #84c208, 1px 1px 1px #80bd08, 2px 2px 1px #7db808, 3px 3px 1px #7ab307, 4px 4px 1px #76ae07, 5px 5px 1px #73a907;
+  -moz-box-shadow: #84c208 0px 0px 1px, #80bd08 1px 1px 1px, #7db808 2px 2px 1px, #7ab307 3px 3px 1px, #76ae07 4px 4px 1px, #73a907 5px 5px 1px;
+}
+.box.alcalinsearth {
+  background-color: #5feb3b;
+  -webkit-box-shadow: 0px 0px 1px #30aa11, 1px 1px 1px #2fa511, 2px 2px 1px #2ea010, 3px 3px 1px #2c9c10, 4px 4px 1px #2b970f, 5px 5px 1px #2a920f;
+  -moz-box-shadow: #30aa11 0px 0px 1px, #2fa511 1px 1px 1px, #2ea010 2px 2px 1px, #2c9c10 3px 3px 1px, #2b970f 4px 4px 1px, #2a920f 5px 5px 1px;
+}
+.box.transimetal {
+  background-color: #34d0ba;
+  -webkit-box-shadow: 0px 0px 1px #1d7c6f, 1px 1px 1px #1c786b, 2px 2px 1px #1b7467, 3px 3px 1px #1a7064, 4px 4px 1px #196c60, 5px 5px 1px #18675c;
+  -moz-box-shadow: #1d7c6f 0px 0px 1px, #1c786b 1px 1px 1px, #1b7467 2px 2px 1px, #1a7064 3px 3px 1px, #196c60 4px 4px 1px, #18675c 5px 5px 1px;
+}
+.box.poormetal {
+  background-color: #3ca0d0;
+  -webkit-box-shadow: 0px 0px 1px #1f6282, 1px 1px 1px #1e5f7e, 2px 2px 1px #1d5c79, 3px 3px 1px #1c5875, 4px 4px 1px #1b5571, 5px 5px 1px #1a526d;
+  -moz-box-shadow: #1f6282 0px 0px 1px, #1e5f7e 1px 1px 1px, #1d5c79 2px 2px 1px, #1c5875 3px 3px 1px, #1b5571 4px 4px 1px, #1a526d 5px 5px 1px;
+}
+.box.nonmetal {
+  background-color: #ffad40;
+  -webkit-box-shadow: 0px 0px 1px #d47900, 1px 1px 1px #cf7600, 2px 2px 1px #ca7300, 3px 3px 1px #c57000, 4px 4px 1px #c06d00, 5px 5px 1px #ba6a00;
+  -moz-box-shadow: #d47900 0px 0px 1px, #cf7600 1px 1px 1px, #ca7300 2px 2px 1px, #c57000 3px 3px 1px, #c06d00 4px 4px 1px, #ba6a00 5px 5px 1px;
+}
+.box.metalloid {
+  background-color: #476dd5;
+  -webkit-box-shadow: 0px 0px 1px #213f90, 1px 1px 1px #203d8c, 2px 2px 1px #1f3b88, 3px 3px 1px #1e3984, 4px 4px 1px #1d377f, 5px 5px 1px #1c367b;
+  -moz-box-shadow: #213f90 0px 0px 1px, #203d8c 1px 1px 1px, #1f3b88 2px 2px 1px, #1e3984 3px 3px 1px, #1d377f 4px 4px 1px, #1c367b 5px 5px 1px;
+}
+.box.halogen {
+  background-color: #8643d6;
+  -webkit-box-shadow: 0px 0px 1px #521f8f, 1px 1px 1px #501e8b, 2px 2px 1px #4d1d86, 3px 3px 1px #4b1c82, 4px 4px 1px #481b7e, 5px 5px 1px #461b7a;
+  -moz-box-shadow: #521f8f 0px 0px 1px, #501e8b 1px 1px 1px, #4d1d86 2px 2px 1px, #4b1c82 3px 3px 1px, #481b7e 4px 4px 1px, #461b7a 5px 5px 1px;
+}
+.box.noblegas {
+  background-color: #ffde40;
+  -webkit-box-shadow: 0px 0px 1px #d4af00, 1px 1px 1px #cfab00, 2px 2px 1px #caa700, 3px 3px 1px #c5a300, 4px 4px 1px #c09e00, 5px 5px 1px #ba9a00;
+  -moz-box-shadow: #d4af00 0px 0px 1px, #cfab00 1px 1px 1px, #caa700 2px 2px 1px, #c5a300 3px 3px 1px, #c09e00 4px 4px 1px, #ba9a00 5px 5px 1px;
+}
+.box.lanthan {
+  background-color: #ea69a6;
+  -webkit-box-shadow: 0px 0px 1px #cb1c6f, 1px 1px 1px #c71c6d, 2px 2px 1px #c21b6a, 3px 3px 1px #be1b68, 4px 4px 1px #ba1a65, 5px 5px 1px #b51963;
+  -moz-box-shadow: #cb1c6f 0px 0px 1px, #c71c6d 1px 1px 1px, #c21b6a 2px 2px 1px, #be1b68 3px 3px 1px, #ba1a65 4px 4px 1px, #b51963 5px 5px 1px;
+}
+.box.actin {
+  background-color: #ff4040;
+  -webkit-box-shadow: 0px 0px 1px #d40000, 1px 1px 1px #cf0000, 2px 2px 1px #ca0000, 3px 3px 1px #c50000, 4px 4px 1px #c00000, 5px 5px 1px #ba0000;
+  -moz-box-shadow: #d40000 0px 0px 1px, #cf0000 1px 1px 1px, #ca0000 2px 2px 1px, #c50000 3px 3px 1px, #c00000 4px 4px 1px, #ba0000 5px 5px 1px;
+}
+.ptable ul {
+  list-style: none;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+.ptable ul a {
+  text-decoration: none;
+}
+.container {
+  width: 1180px;
+}

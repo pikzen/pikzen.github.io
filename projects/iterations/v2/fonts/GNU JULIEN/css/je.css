@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Terminus;
+  src: '../fonts/terminus.ttf';
+}
+*::selection {
+  background-color: white;
+}
+html {
+  background-image: url('../img/bgblack.png');
+  color: gainsboro;
+  font-family: Terminus;
+}
+body .container {
+  width: 960px;
+  margin: 0 auto;
+}
+body .container a {
+  color: gainsboro;
+}
+body .container a:visited {
+  color: gainsboro;
+}
+body .container a:hover {
+  color: gainsboro;
+}
+body .link {
+  width: 250px;
+  display: inline;
+  float: left;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 70px;
+}
+body .link img {
+  position: relative;
+  width: 250px;
+  height: 166.666666667px;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+body .link img:hover {
+  opacity: 0;
+}
+body .link .linkTextHover {
+  position: relative;
+  margin-top: 0px;
+  left: 1.5;
+  margin-left: 0px;
+  text-align: left;
+  padding-left: 5px;
+  line-height: 0.8em;
+  width: 250px;
+  background-color: #111111;
+  height: 50px;
+}
+body .link h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+body .link h4 {
+  font-size: 8pt;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+  overflow: hidden;
+}
+header {
+  text-align: center;
+}
+.clearfix {
+  clear: both;
+  position: absolute;
+}
+#elem1 {
+  background-image: url('http://placehold.it/300x200');
+}
+#elem2 {
+  background-image: url('http://placehold.it/300x200');
+}

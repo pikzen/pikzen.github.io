@@ -1,0 +1,231 @@
+@alcalins: #B9F73E;
+@alcalinsBehind: darken(@alcalins, 20%);
+
+@alcalinsEarth: #5FEB3B;
+@alcalinsEarthBehind: darken(@alcalinsEarth, 20%);
+
+@transiMetal: #34D0BA   ;
+@transiMetalBehind: darken(@transiMetal, 20%);
+
+@poorMetal:#3CA0D0;
+@poorMetalBehind: darken(@poorMetal, 20%);
+
+@metalloid: #476DD5;
+@metalloidBehind: darken(@metalloid, 20%);
+
+@nonMetal:#FFAD40;
+@nonMetalBehind: darken(@nonMetal, 20%);
+
+@halogen:#8643D6;
+@halogenBehind: darken(@halogen, 20%);
+
+@nobleGas:#FFDE40;
+@nobleGasBehind: darken(@nobleGas, 20%);
+
+@actin: #FF4040;
+@actinBehind: darken(@actin, 20%);
+
+@lanthan: #EA69A6;
+@lanthanBehind: darken(@lanthan, 20%);
+
+@textColor: #545454;
+@textShadowColor: #363636;
+
+.vendorTransition(@target, @duration, @type)
+{
+    -webkit-transition: @target @duration @type;
+    -moz-transition: @target @duration @type;
+    -o-transition: @target @duration @type;
+    -ms-transition: @target @duration @type;
+    transition: @target @duration @type;
+}
+
+.transition(@target, @duration, @type)
+{
+    -webkit-transition: @target @duration @type;
+    -moz-transition: @target @duration @type;
+    -o-transition: @target @duration @type;
+    -ms-transition: @target @duration @type;
+    transition: @target @duration @type;
+}
+
+.transformOrigin(@x, @y)
+{
+    -webkit-transform-origin: @x @y;
+    -moz-transform-origin: @x @y;
+}
+
+@darkTextColor: #2C2C2C;
+@boxColor: lighten(@darkTextColor, 20%);
+@shadowColor: lighten(@darkTextColor, 10%);
+
+
+.box:hover {
+    -webkit-transform: scale(1.5, 1.5);
+    -moz-transform: scale(1.5, 1.5) rotate(0.01deg);
+    cursor: pointer;
+
+    .elemname {
+        visibility: visible;
+        opacity: 1;
+        -moz-opacity: 1;
+        filter:alpha(opacity=1);
+    }
+}
+.box.categ {
+        
+}
+
+.3DEffect(@Color) {
+    -webkit-box-shadow: 0px 0px 1px darken(@Color, 1%),
+        1px 1px 1px darken(@Color, 2%),
+        2px 2px 1px darken(@Color, 3%),
+        3px 3px 1px darken(@Color, 4%),
+        4px 4px 1px darken(@Color, 5%),
+        5px 5px 1px darken(@Color, 6%);
+
+    -moz-box-shadow: darken(@Color, 1%) 0px 0px 1px,
+        darken(@Color, 2%) 1px 1px 1px,
+        darken(@Color, 3%) 2px 2px 1px,
+        darken(@Color, 4%) 3px 3px 1px,
+        darken(@Color, 5%) 4px 4px 1px,
+        darken(@Color, 6%) 5px 5px 1px;
+
+}
+
+h2 {
+    color: @darkTextColor;
+}
+
+.box {
+    -moz-transform-origin: 100% 100%;
+    -moz-transition: -moz-box-shadow 0.2s ease-in;
+    -moz-transition: -moz-transform 0.2s ease-in;
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    .3DEffect(@shadowColor);
+    background-color: @boxColor;
+    color: darken(@textColor, 10%);
+    font-size: 24px;
+    font-weight: bold;
+    height: 65px;
+    horizontal-align: center;
+    line-height: 0.7em;
+    margin: auto;
+    text-align: center;
+    text-shadow: 0px -1px 0px @textShadowColor;
+    vertical-align: middle;
+    width: 65px;
+
+    .elemnum {
+        font-size: 12px;
+        color: darken(@textColor, 10%);
+        text-shadow: none;
+        line-height: 2em;
+        font-weight: lighter;
+    }
+
+    .elemname {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 9px;
+        line-height: 0.1em;
+        color: darken(@textColor, 10%);
+        text-shadow: none;
+        .transition(opacity, 0.2s, ease-in-out);
+        font-weight: lighter;
+    }
+
+    .invisible {
+        margin: auto;
+        line-height: 6em;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+        &:hover {
+            -webkit-transform: none;
+            cursor: default;
+        }
+    }
+
+
+    &.categ {
+        font-size: 10px;
+        color: @textColor;
+        text-shadow: none;
+        vertical-align: middle;
+        line-height: 6em;
+    }
+
+    &.alcalins {
+        background-color: @alcalins;
+        .3DEffect(@alcalinsBehind);
+    }
+
+    &.alcalinsearth {
+        background-color: @alcalinsEarth;
+        .3DEffect(@alcalinsEarthBehind);
+    }
+
+    &.transimetal {
+        background-color: @transiMetal;
+        .3DEffect(@transiMetalBehind);
+    }
+
+    &.poormetal {
+        background-color: @poorMetal;
+        .3DEffect(@poorMetalBehind);
+    }
+
+    &.nonmetal {
+        background-color: @nonMetal;
+        .3DEffect(@nonMetalBehind);
+    }
+
+    &.metalloid {
+        background-color: @metalloid;
+        .3DEffect(@metalloidBehind);
+    }
+
+    &.halogen {
+        background-color: @halogen;
+        .3DEffect(@halogenBehind);
+    }
+
+    &.noblegas {
+        background-color: @nobleGas;
+        .3DEffect(@nobleGasBehind);
+    }
+
+    &.lanthan {
+        background-color: @lanthan;
+        .3DEffect(@lanthanBehind);
+    }
+
+    &.actin {
+        background-color: @actin;
+        .3DEffect(@actinBehind);
+    }
+}
+
+
+.ptable {
+
+    ul {
+
+        list-style: none;
+        float: left;
+        padding: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+    .container {
+        width: 1180px;
+    }
