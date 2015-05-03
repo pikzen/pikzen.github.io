@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>AppliMed</title>
+
+  
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+  sd
+
+  <script src="javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+	<div class="row header">
+		<div class="large-3 columns site-logo">Appli<span class="site-logo-highlight">M</span>ed</div>
+		<div class="large-6 columns">Administration</div>
+		<div class="large-3 columns login"><a href="#" data-dropdown="drop-login"><i class="fa fa-cog"></i></a></div>
+               <ul id="drop-login" class="f-dropdown" data-dropdown-content>
+                  <li><input type="text" placeholder="Utilisateur"></li>
+                  <li><input type="text" placeholder="Mot de passe"></li>
+                  <li><div class="button">Connexion</div></li>
+               </ul>
+	</div>
+
+	<div class="row collapse main-content">
+		<div class="large-12 columns">
+			<div class="row registered-users">
+				<div class="large-12 columns">
+					<h1>Utilisateurs en attente</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>Nom</th>
+							<th>Fonction</th>
+							<th>Medecin Referent</th>
+							<th>Valider ?</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Xavier Deschamps</td>
+							<td>Patient (Automédication)</td>
+							<td>Molène Bonhoure</td>
+							<td class="validation"><a href="#"><i  class="fa fa-check"></i></a> / <a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+			<div class="row registered-users">
+				<div class="large-12 columns">
+					<h1>Utilisateurs</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>Nom</th>
+							<th>Fonction</th>
+							<th>Medecin Referent</th>
+							<th>Identifiant</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Florian Eula</td>
+							<td>Infirmier</td>
+							<td>Molène Bonhoure</td>
+							<td>feula</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+						<tr>
+							<td>Mickael Deleule</td>
+							<td>Médecin</td>
+							<td></td>
+							<td>mdeuleule</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+						<tr>
+							<td>Samuel Lennon</td>
+							<td>Patient</td>
+							<td>Molène Bonhoure</td>
+							<td>slennon</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+						<tr>
+							<td>Alexandre Le Poupon</td>
+							<td>Patient (Automédication)</td>
+							<td>Molène Bonhoure</td>
+							<td>alepoupon</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="button">Ajouter</button>
+			</div>
+			</div>
+			<div class="row medicaments">
+				<div class="large-12 columns">
+					<h1>Medicaments</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>Nom</th>
+							<th>Dose</th>
+							<th>Effet sur l'INR</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Coumadine</td>
+							<td>0.5mg</td>
+							<td>+ 0.25 / dose</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+						<tr>
+							<td>Previscan</td>
+							<td>5mg</td>
+							<td>- 0.35 / dose</td>
+							<td class="validation"><a href="#"><i class="fa fa-times"</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="button">Ajouter</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+	
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

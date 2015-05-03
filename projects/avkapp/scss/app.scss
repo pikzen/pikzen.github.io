@@ -1,0 +1,131 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+.top-bar {
+	height: 80px;
+	background-color: #eee;
+	text-align: center;
+	.login {
+		line-height: 80px;
+		text-align: right;
+		padding-right: 50px;
+	}
+
+	#drop-login {
+		visibility: hidden;
+	}
+
+
+
+	.site-logo {
+		font-family: 'Bebas Neue';
+		font-size: 46px;
+		line-height: 80px;
+	}
+
+	.site-logo-highlight {
+		color: red;
+	}
+	.site-nav-link {
+		font-family: 'Open Sans';
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		height: 80px;
+		line-height: 80px;
+		font-size: 18px;
+
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+
+	.site-nav-login {
+		background-color: #444;
+		color: white;
+		font-size: 24px;
+		line-height: 36px;
+		height: 36px;
+		width: 36px;
+
+		cursor: pointer;
+	}
+
+	.site-nav-link-selected {
+		background-color: #ddd;
+	}
+}
+
+.main-content {
+	margin-top: 50px;
+	width: 80%;
+}
+
+#medicaments-toggler {
+	text-align: center;
+}
+
+#medicaments-inter {
+	display: none;
+}
+
+table {
+	.inter-mednote {
+		width: 70%;
+		min-width: 200px;
+	}
+
+	.inter-medchange {
+		width: 10%;
+	}
+
+	.inter-medname {
+		width: 20%;
+	}
+}
+
+.important {
+	font-weight: bold;
+}
+
+.hist-user-info {
+	h5 {
+		text-align: center;
+	}
+}
+
+td.warning {
+	&.important {
+		background-color: rgb(255, 64, 64);
+	}
+
+	&.light {
+		background-color: rgb(255,128,128);
+	}
+}
+.inr-result {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+
+	tr {
+		td.validation {
+			text-align: right;
+		}
+	}
+}
+
+.hist-chart {
+	text-align: center;
+}
+
