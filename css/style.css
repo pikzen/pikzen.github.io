@@ -124,7 +124,11 @@ a.project-link {
   text-decoration: none;
 }
 .container a {
-  color: #354678 !important;
+  color: #354678;
+}
+
+.container .site-info a { 
+  color: white;
 }
 input[type="text"], input[type="email"] {
   max-width: 80%;
