@@ -79,17 +79,17 @@ p {
 }
 
 .site-info {
-  background-color: #345678; 
-  height: 100vh; 
-  position: fixed; 
-  padding: 20px; 
-  padding-top: 100px; 
+  background-color: #345678;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  padding-top: 100px;
   text-align: right;
   padding-right: 40px;
 }
 
 .content {
-  margin-left: 33%; 
+  margin-left: 33%;
   padding-top: 100px;
 }
 
@@ -113,8 +113,8 @@ p {
 }
 
 .site-image img {
-  width: 92px; 
-  height: 92px; 
+  width: 92px;
+  height: 92px;
   border-radius: 9999px;
 }
 
@@ -122,12 +122,17 @@ a.project-link {
   padding: 0;
   margin: 0;
   text-decoration: none;
+	max-width: 350px;
+}
+
+.six.columns a.project-link p {
+	max-width: 350px;
 }
 .container a {
   color: #354678;
 }
 
-.container .site-info a { 
+.container .site-info a {
   color: white;
 }
 input[type="text"], input[type="email"] {
