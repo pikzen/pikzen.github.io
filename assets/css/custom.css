@@ -1,0 +1,53 @@
+.posts-small article {
+    display: flex;
+}
+.posts-small article .post-description {
+    vertical-align: middle;
+    padding-left: 24px;
+}
+.posts-small article .actions {
+    vertical-align: bottom;
+}
+.posts-small article .image {
+    min-width: 300px;
+}
+
+h3 a.source-link {
+    border-bottom-color: #f56a6a;
+    color: #f56a6a !important;
+    font-size: 0.8em;
+}
+
+#studies .features article .icon:after {
+    height: 5em;
+    width: 5em;
+}
+#studies .features article .icon:before {
+    margin: 0 0 0 -0.8em;
+}
+#studies .features article .icon {
+    line-height: 8em;
+}
+#studies article .icon img {
+    width: 30%;
+    margin: 0 0 0 -1.8em;
+}
+
+@media screen and (max-width: 736px) {
+    .posts-small article {
+        flex-direction: column;
+    }
+    .posts-small article .post-description {
+        padding-left: 0;
+    }
+    #studies .features article .icon:after {
+        height: 4em;
+        width: 4em;
+    }
+    #studies .features article .icon:before {
+        margin: 0 0 0 0em;
+    }
+    #studies .features article .icon {
+        line-height: 6em;
+    }
+}
